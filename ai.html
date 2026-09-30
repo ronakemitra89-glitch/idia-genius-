@@ -1,0 +1,180 @@
+1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Generator | IDEA GENIUS</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#0b1020;color:#fff;min-height:100vh}
+header{background:#141b33;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;border-bottom:1px solid #303957}
+.logo{font-size:25px;font-weight:bold;color:#a78bfa}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:#dbe3ff;text-decoration:none;font-size:14px}
+nav a:hover{color:#a78bfa}
+.container{max-width:1050px;margin:45px auto;padding:20px}
+.hero{text-align:center;margin-bottom:30px}
+.hero h1{font-size:38px;margin-bottom:12px}
+.hero h1 span{color:#a78bfa}
+.hero p{color:#aab4d0;line-height:1.7}
+.card{background:#151d36;border:1px solid #303957;border-radius:18px;padding:25px;margin-bottom:25px}
+label{display:block;margin:17px 0 8px;font-weight:bold}
+input,select,textarea{width:100%;padding:13px;border-radius:10px;border:1px solid #394566;background:#0d1429;color:#fff;font-size:15px;outline:none}
+textarea{min-height:100px;resize:vertical}
+button{border:0;border-radius:10px;padding:13px 20px;background:#8b5cf6;color:#fff;font-weight:bold;cursor:pointer;margin-top:18px;font-size:15px}
+button:hover{background:#7444e8}
+.result{display:none;margin-top:25px;background:#0d1429;border:1px solid #394566;border-radius:14px;padding:22px}
+.result h2{color:#a78bfa;margin-bottom:12px}
+.result p{line-height:1.7;color:#dbe3ff}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.actions button{margin-top:15px}
+.secondary{background:#293451}
+footer{text-align:center;padding:25px;color:#8994b5;border-top:1px solid #303957;margin-top:40px}
+@media(max-width:600px){.hero h1{font-size:29px}.container{margin:25px auto}.card{padding:18px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">💡 IDEA GENIUS</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="business.html">Business</a>
+    <a href="youtube.html">YouTube</a>
+    <a href="website.html">Website</a>
+    <a href="ai.html">AI Generator</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>AI <span>Idea Generator</span> 🤖</h1>
+    <p>अपनी पसंद और जरूरत के अनुसार नया आइडिया खोजें।<br>अपनी जानकारी भरें और Generate पर क्लिक करें।</p>
+  </section>
+
+  <section class="card">
+    <h2>✨ Generate Your Idea</h2>
+
+```
+<label for="category">आपको किस तरह का आइडिया चाहिए?</label>
+<select id="category">
+  <option value="business">Business Idea</option>
+  <option value="youtube">YouTube Video Idea</option>
+  <option value="website">Website Idea</option>
+  <option value="any">कोई भी आइडिया</option>
+</select>
+
+<label for="interest">आपकी रुचि क्या है?</label>
+<input id="interest" type="text" placeholder="जैसे: Technology, Education, Gaming">
+
+<label for="budget">आपका बजट</label>
+<select id="budget">
+  <option value="कम बजट">कम बजट</option>
+  <option value="मध्यम बजट">मध्यम बजट</option>
+  <option value="अधिक बजट">अधिक बजट</option>
+  <option value="बजट नहीं बताया">बजट तय नहीं है</option>
+</select>
+
+<label for="details">कोई खास जानकारी (वैकल्पिक)</label>
+<textarea id="details" placeholder="आप किस तरह का आइडिया चाहते हैं?"></textarea>
+
+<button onclick="generateIdea()">🚀 Generate Idea</button>
+
+<div class="result" id="result">
+  <h2 id="resultTitle">आपका आइडिया</h2>
+  <p id="resultText"></p>
+  <div class="actions">
+    <button onclick="copyIdea()">📋 Copy Idea</button>
+    <button class="secondary" onclick="saveIdea()">💾 Save Idea</button>
+    <button class="secondary" onclick="generateIdea()">🔄 नया आइडिया</button>
+  </div>
+</div>
+```
+
+  </section>
+</main>
+
+<footer>© 2026 IDEA GENIUS | Think • Create • Grow</footer>
+
+<script>
+const ideas = {
+  business: [
+    {title:"ऑनलाइन गिफ्ट शॉप",text:"कस्टमाइज्ड गिफ्ट, फोटो फ्रेम और पर्सनलाइज्ड मग बेचने का ऑनलाइन बिजनेस शुरू करें। सोशल मीडिया पर अपने प्रोडक्ट दिखाकर ग्राहक खोजें।"},
+    {title:"लोकल डिजिटल सर्विस",text:"अपने इलाके के दुकानदारों के लिए पोस्टर, सोशल मीडिया पोस्ट और डिजिटल प्रचार की सेवाएँ दें। शुरुआत में कम खर्च में काम किया जा सकता है।"},
+    {title:"होममेड फूड बिजनेस",text:"घर पर बने स्नैक्स या खाने के ऑर्डर लेकर छोटे स्तर पर शुरुआत करें। पहले अपने आसपास के ग्राहकों की जरूरत समझें।"}
+  ],
+  youtube: [
+    {title:"एक मिनट में टेक टिप्स",text:"मोबाइल और कंप्यूटर की आसान ट्रिक्स पर 30 से 60 सेकंड के वीडियो बनाएँ। हर वीडियो में एक समस्या और उसका समाधान दिखाएँ।"},
+    {title:"बिना चेहरा दिखाए एजुकेशन चैनल",text:"स्क्रीन रिकॉर्डिंग और वॉइसओवर से कंप्यूटर, इंटरनेट और डिजिटल टूल्स सिखाने वाले वीडियो बनाएँ।"},
+    {title:"लोकल जगहों की जानकारी",text:"अपने शहर या इलाके की खास जगहों, दुकानों और स्थानीय कहानियों पर छोटे वीडियो बनाएँ।"}
+  ],
+  website: [
+    {title:"लोकल बिजनेस डायरेक्टरी",text:"अपने शहर की दुकानों और सेवाओं की जानकारी देने वाली वेबसाइट बनाएँ। इसमें दुकान का नाम, पता, संपर्क और समय शामिल करें।"},
+    {title:"ऑनलाइन लर्निंग वेबसाइट",text:"कंप्यूटर और डिजिटल स्किल्स के शुरुआती पाठों वाली वेबसाइट बनाएँ। आसान भाषा में लेख और अभ्यास जोड़ें।"},
+    {title:"जॉब अपडेट वेबसाइट",text:"नौकरी की सूचनाओं को श्रेणी के अनुसार व्यवस्थित करने वाली वेबसाइट बनाएँ। जानकारी प्रकाशित करने से पहले आधिकारिक स्रोत से पुष्टि करें।"}
+  ]
+};
+
+let currentIdea = null;
+
+function generateIdea(){
+  const category = document.getElementById("category").value;
+  const interest = document.getElementById("interest").value.trim();
+  const budget = document.getElementById("budget").value;
+  const details = document.getElementById("details").value.trim();
+
+  let pool = [];
+  if(category === "any"){
+    pool = [...ideas.business,...ideas.youtube,...ideas.website];
+  } else {
+    pool = ideas[category];
+  }
+
+  currentIdea = pool[Math.floor(Math.random()*pool.length)];
+
+  const title = currentIdea.title;
+  const interestText = interest ? " आपकी रुचि: " + interest + "." : "";
+  const detailsText = details ? " आपकी अतिरिक्त जानकारी: " + details + "." : "";
+
+  document.getElementById("resultTitle").textContent = "💡 " + title;
+  document.getElementById("resultText").textContent =
+    currentIdea.text + interestText + " बजट: " + budget + "." + detailsText +
+    " शुरुआत करने से पहले अपने क्षेत्र में मांग और लागत की जाँच करें।";
+
+  document.getElementById("result").style.display = "block";
+}
+
+function copyIdea(){
+  if(!currentIdea)return;
+  const text = document.getElementById("resultTitle").textContent + "\n" +
+               document.getElementById("resultText").textContent;
+  navigator.clipboard.writeText(text)
+    .then(()=>alert("आइडिया कॉपी हो गया!"))
+    .catch(()=>alert("कॉपी नहीं हो पाया। टेक्स्ट को मैन्युअली कॉपी करें।"));
+}
+
+function saveIdea(){
+  if(!currentIdea)return;
+  const text = document.getElementById("resultTitle").textContent + "\n" +
+               document.getElementById("resultText").textContent;
+  let saved = JSON.parse(localStorage.getItem("ideaGeniusSaved") || "[]");
+  saved.push({title:currentIdea.title,text:text,date:new Date().toLocaleDateString()});
+  localStorage.setItem("ideaGeniusSaved",JSON.stringify(saved));
+  alert("आइडिया सेव हो गया!");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Ideas | IDEA GENIUS</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d25;
+    color: white;
+}
+
+header {
+    background: #101936;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #29365d;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffbd24;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #00d4ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 5%;
+    background: radial-gradient(circle, #153f8c, #080d25 70%);
+}
+
+.hero .icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 50px);
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #00d4ff;
+}
+
+.hero p {
+    color: #c4cce3;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.search {
+    display: flex;
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 6px;
+    background: #101936;
+    border: 1px solid #3675d6;
+    border-radius: 12px;
+}
+
+.search input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.search button {
+    padding: 12px 22px;
+    background: #087df0;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.container {
+    padding: 40px 5%;
+}
+
+.heading {
+    margin-bottom: 25px;
+}
+
+.heading h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    color: #aebbd8;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.filters button {
+    padding: 11px 20px;
+    border-radius: 25px;
+    background: #172448;
+    color: white;
+    border: 1px solid #34446f;
+    cursor: pointer;
+}
+
+.filters button.active,
+.filters button:hover {
+    background: #087df0;
+    border-color: #087df0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 22px;
+    background: #101936;
+    border: 1px solid #29365d;
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #087df0;
+}
+
+.card-icon {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 7px 12px;
+    margin-bottom: 14px;
+    border-radius: 20px;
+    background: #123c68;
+    color: #83c7ff;
+    font-size: 12px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #b5c1dc;
+    line-height: 1.7;
+    font-size: 14px;
+    min-height: 72px;
+}
+
+.details {
+    border-top: 1px solid #29365d;
+    padding-top: 14px;
+    margin-top: 15px;
+    color: #aebbd8;
+    font-size: 13px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.actions button {
+    flex: 1;
+    padding: 11px 8px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.save {
+    background: #26355b;
+    color: white;
+}
+
+.copy {
+    background: #087df0;
+    color: white;
+}
+
+.actions button:hover {
+    opacity: .8;
+}
+
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 35px;
+    background: #101936;
+    border-radius: 15px;
+    color: #b5c1dc;
+}
+
+.tips {
+    margin-top: 40px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #315c9e;
+    background: linear-gradient(130deg, #102d65, #101d45);
+    border-radius: 18px;
+}
+
+.tips h2 {
+    margin-bottom: 15px;
+}
+
+.tips p {
+    color: #c4cce3;
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    background: #101936;
+    border-top: 1px solid #29365d;
+    padding: 25px;
+    color: #aebbd8;
+    line-height: 2;
+}
+
+@media(max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero {
+        padding: 45px 5%;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .search {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">💡 IDEA <span>GENIUS</span></div>
+
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="business.html">💼 Business</a>
+        <a href="youtube.html">🎬 YouTube</a>
+        <a href="website.html">🌐 Website</a>
+        <a href="ai.html">🤖 AI Generator</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="icon">🌐</div>
+
+    <h1>Website <span>Ideas</span></h1>
+
+    <p>
+        अपनी खुद की वेबसाइट बनाने के लिए नए आइडिया खोजें।<br>
+        एजुकेशन, बिजनेस, टेक्नोलॉजी और ऑनलाइन टूल्स के आइडिया।
+    </p>
+
+    <div class="search">
+        <input
+            type="text"
+            id="search"
+            placeholder="वेबसाइट आइडिया खोजें..."
+        >
+        <button onclick="searchIdeas()">🔍 खोजें</button>
+    </div>
+</section>
+
+<section class="container">
+
+    <div class="heading">
+        <h2>🚀 वेबसाइट बनाने के आइडिया</h2>
+        <p>अपनी पसंद की कैटेगरी चुनें और नए आइडिया पाएँ।</p>
+    </div>
+
+    <div class="filters">
+        <button class="active" onclick="filterIdeas('All',this)">
+            सभी
+        </button>
+
+        <button onclick="filterIdeas('Business',this)">
+            💼 Business
+        </button>
+
+        <button onclick="filterIdeas('Education',this)">
+            📚 Education
+        </button>
+
+        <button onclick="filterIdeas('Tools',this)">
+            🛠️ Online Tools
+        </button>
+
+        <button onclick="filterIdeas('Entertainment',this)">
+            🎮 Entertainment
+        </button>
+    </div>
+
+    <div class="cards" id="cards"></div>
+
+    <div class="tips">
+        <h2>💡 अपनी वेबसाइट कैसे बनाएँ?</h2>
+        <p>
+            सबसे पहले अपनी वेबसाइट का उद्देश्य तय करें।
+            फिर HTML से उसका ढाँचा, CSS से डिजाइन और
+            JavaScript से फीचर्स तैयार करें।
+            वेबसाइट को इंटरनेट पर लाइव करने के लिए
+            Hosting का इस्तेमाल कर सकते हैं।
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    <strong>💡 IDEA GENIUS</strong><br>
+    Big Ideas • Better Future 🚀<br>
+    Made with ❤️ by Ronak<br>
+    © 2026 IDEA GENIUS
+</footer>
+
+<script>
+const websiteIdeas = [
+    {
+        id: 1,
+        icon: "📄",
+        title: "Free Resume Builder",
+        category: "Tools",
+        desc: "एक ऐसी वेबसाइट बनाएँ जहाँ लोग अपनी जानकारी भरकर रिज्यूमे बना सकें।",
+        details: "कैटेगरी: Online Tool"
+    },
+    {
+        id: 2,
+        icon: "🧮",
+        title: "Online Calculator Hub",
+        category: "Tools",
+        desc: "उम्र, प्रतिशत, EMI और अन्य कैलकुलेटर एक ही वेबसाइट पर उपलब्ध कराएँ।",
+        details: "कैटेगरी: Utility"
+    },
+    {
+        id: 3,
+        icon: "📚",
+        title: "Online Learning Website",
+        category: "Education",
+        desc: "विद्यार्थियों के लिए ऑनलाइन नोट्स, क्विज और पढ़ाई की सामग्री उपलब्ध कराएँ।",
+        details: "कैटेगरी: Education"
+    },
+    {
+        id: 4,
+        icon: "💼",
+        title: "Local Job Portal",
+        category: "Business",
+        desc: "अपने शहर और आसपास की नौकरियों की जानकारी देने वाली वेबसाइट बनाएँ।",
+        details: "कैटेगरी: Job Portal"
+    },
+    {
+        id: 5,
+        icon: "🤖",
+        title: "AI Story Generator",
+        category: "Tools",
+        desc: "यूज़र की पसंद के अनुसार नई कहानियाँ तैयार करने वाली वेबसाइट बनाएँ।",
+        details: "कैटेगरी: AI Tool"
+    },
+    {
+        id: 6,
+        icon: "🎮",
+        title: "Online Quiz Website",
+        category: "Entertainment",
+        desc: "लोगों के लिए मनोरंजक और ज्ञानवर्धक क्विज तैयार करें।",
+        details: "कैटेगरी: Quiz"
+    },
+    {
+        id: 7,
+        icon: "🛒",
+        title: "Online Shopping Store",
+        category: "Business",
+        desc: "एक ऐसी वेबसाइट बनाएँ जहाँ लोग अलग-अलग उत्पाद देख सकें और खरीद सकें।",
+        details: "कैटेगरी: E-commerce"
+    },
+    {
+        id: 8,
+        icon: "🎬",
+        title: "Movie Information Website",
+        category: "Entertainment",
+        desc: "फिल्मों, कलाकारों और फिल्मों से जुड़ी जानकारी दिखाने वाली वेबसाइट बनाएँ।",
+        details: "कैटेगरी: Entertainment"
+    },
+    {
+        id: 9,
+        icon: "💻",
+        title: "Coding Tutorial Website",
+        category: "Education",
+        desc: "HTML, CSS और JavaScript के आसान पाठ और उदाहरण उपलब्ध कराएँ।",
+        details: "कैटेगरी: Coding"
+    },
+    {
+        id: 10,
+        icon: "💡",
+        title: "Idea Generator Website",
+        category: "Tools",
+        desc: "लोगों को बिजनेस, YouTube और वेबसाइट के नए आइडिया देने वाली वेबसाइट बनाएँ।",
+        details: "कैटेगरी: Creative Tool"
+    }
+];
+
+let activeCategory = "All";
+
+function getSaved() {
+    try {
+        return JSON.parse(localStorage.getItem("websiteSaved")) || [];
+    } catch {
+        return [];
+    }
+}
+
+function toggleSave(id) {
+    let saved = getSaved();
+
+    if (saved.includes(id)) {
+        saved = saved.filter(item => item !== id);
+    } else {
+        saved.push(id);
+    }
+
+    localStorage.setItem("websiteSaved", JSON.stringify(saved));
+    renderIdeas();
+}
+
+function renderIdeas() {
+    const query = document
+        .getElementById("search")
+        .value.toLowerCase();
+
+    const filtered = websiteIdeas.filter(idea => {
+        const categoryMatch =
+            activeCategory === "All" ||
+            idea.category === activeCategory;
+
+        const searchMatch =
+            (idea.title + " " + idea.desc + " " + idea.category)
+            .toLowerCase()
+            .includes(query);
+
+        return categoryMatch && searchMatch;
+    });
+
+    const saved = getSaved();
+
+    document.getElementById("cards").innerHTML =
+        filtered.length
+        ? filtered.map(idea => `
+            <div class="card">
+                <div class="card-icon">${idea.icon}</div>
+
+                <span class="tag">${idea.category}</span>
+
+                <h3>${idea.title}</h3>
+
+                <p>${idea.desc}</p>
+
+                <div class="details">
+                    ✨ ${idea.details}
+                </div>
+
+                <div class="actions">
+                    <button class="save"
+                        onclick="toggleSave(${idea.id})">
+                        ${saved.includes(idea.id) ? "❤️ Saved" : "🤍 Save"}
+                    </button>
+
+                    <button class="copy"
+                        onclick="copyIdea(${idea.id})">
+                        📋 Copy
+                    </button>
+                </div>
+            </div>
+        `).join("")
+        : `<div class="empty">😕 कोई आइडिया नहीं मिला।</div>`;
+}
+
+function filterIdeas(category, button) {
+    activeCategory = category;
+
+    document.querySelectorAll(".filters button")
+        .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+    renderIdeas();
+}
+
+function searchIdeas() {
+    renderIdeas();
+}
+
+async function copyIdea(id) {
+    const idea = websiteIdeas.find(item => item.id === id);
+
+    const text =
+        idea.title + "\n\n" +
+        idea.desc + "\n\n" +
+        "Category: " + idea.category;
+
+    try {
+        await navigator.clipboard.writeText(text);
+        alert("✅ आइडिया कॉपी हो गया!");
+    } catch {
+        prompt("इस आइडिया को कॉपी करें:", text);
+    }
+}
+
+document.getElementById("search").addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+        searchIdeas();
+    }
+});
+
+renderIdeas();
+</script>
+
+</body>
+</html>

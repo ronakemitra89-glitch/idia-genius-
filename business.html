@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Ideas | IDEA GENIUS</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d25;
+    color: white;
+}
+
+header {
+    background: #101936;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #29365d;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffbd24;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #a47aff;
+}
+
+.hero {
+    padding: 65px 5%;
+    text-align: center;
+    background: radial-gradient(circle, #402080, #080d25 70%);
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #ffbd24;
+}
+
+.hero p {
+    color: #c4cce3;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.search {
+    margin: 30px auto;
+    display: flex;
+    max-width: 550px;
+    background: #101936;
+    border: 1px solid #7855d8;
+    border-radius: 12px;
+    padding: 6px;
+}
+
+.search input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 12px;
+}
+
+.search button {
+    background: #713cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.container {
+    padding: 40px 5%;
+}
+
+.heading {
+    margin-bottom: 25px;
+}
+
+.heading h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    color: #aebbd8;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filters button {
+    background: #172448;
+    color: white;
+    border: 1px solid #34446f;
+    border-radius: 20px;
+    padding: 11px 20px;
+    cursor: pointer;
+}
+
+.filters button.active,
+.filters button:hover {
+    background: #713cff;
+    border-color: #713cff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #101936;
+    border: 1px solid #28365f;
+    border-radius: 16px;
+    padding: 22px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #8855ff;
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    background: #164d40;
+    color: #66f0c1;
+    padding: 7px 12px;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #b5c1dc;
+    line-height: 1.7;
+    font-size: 14px;
+    min-height: 72px;
+}
+
+.details {
+    border-top: 1px solid #29365d;
+    padding-top: 15px;
+    margin-top: 15px;
+    color: #aebbd8;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.actions button {
+    flex: 1;
+    padding: 11px 8px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.save {
+    background: #26355b;
+    color: white;
+}
+
+.more {
+    background: #713cff;
+    color: white;
+}
+
+.empty {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 35px;
+    color: #b5c1dc;
+}
+
+.info {
+    margin-top: 45px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #51408b;
+    background: #17183d;
+    border-radius: 18px;
+}
+
+.info h2 {
+    margin-bottom: 12px;
+}
+
+.info p {
+    color: #c4cce3;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    background: #101936;
+    border-top: 1px solid #29365d;
+    padding: 25px;
+    color: #aebbd8;
+    line-height: 2;
+}
+
+@media(max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .search {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">💡 IDEA <span>GENIUS</span></div>
+
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="business.html">💼 Business</a>
+        <a href="index.html#categories">🎬 YouTube</a>
+        <a href="index.html#categories">🌐 Website</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>💼 Business <span>Ideas</span></h1>
+    <p>
+        अपना खुद का बिजनेस शुरू करने के लिए नए आइडिया खोजें।<br>
+        छोटे बिजनेस से लेकर ऑनलाइन बिजनेस तक।
+    </p>
+
+    <div class="search">
+        <input type="text" id="search"
+               placeholder="बिजनेस आइडिया खोजें...">
+        <button onclick="searchIdeas()">खोजें 🔍</button>
+    </div>
+</section>
+
+<section class="container">
+
+    <div class="heading">
+        <h2>🚀 बिजनेस आइडिया</h2>
+        <p>अपनी पसंद की कैटेगरी चुनें और आइडिया देखें।</p>
+    </div>
+
+    <div class="filters">
+        <button class="active" onclick="filterIdeas('All',this)">सभी</button>
+        <button onclick="filterIdeas('Low',this)">कम लागत</button>
+        <button onclick="filterIdeas('Online',this)">ऑनलाइन</button>
+        <button onclick="filterIdeas('Food',this)">फूड बिजनेस</button>
+    </div>
+
+    <div class="cards" id="cards"></div>
+
+    <div class="info">
+        <h2>💡 अपना बिजनेस शुरू करें!</h2>
+        <p>
+            किसी भी बिजनेस को शुरू करने से पहले उसकी लागत,
+            बाजार की मांग और जरूरी लाइसेंस की जानकारी जरूर लें।
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    <strong>💡 IDEA GENIUS</strong><br>
+    Big Ideas • Better Future 🚀<br>
+    Made with ❤️ by Ronak<br>
+    © 2026 IDEA GENIUS
+</footer>
+
+<script>
+const businessIdeas = [
+    {
+        id: 1,
+        icon: "🍱",
+        title: "Tiffin Service",
+        category: "Food",
+        cost: "कम लागत",
+        desc: "ऑफिस और कॉलेज जाने वाले लोगों को घर का बना खाना उपलब्ध कराएँ।",
+        details: "शुरुआत: घर से | ग्राहक: विद्यार्थी और कर्मचारी"
+    },
+    {
+        id: 2,
+        icon: "📱",
+        title: "Mobile Accessories",
+        category: "Low",
+        cost: "मध्यम लागत",
+        desc: "मोबाइल कवर, चार्जर, ईयरफोन और अन्य एक्सेसरीज़ बेचें।",
+        details: "शुरुआत: दुकान या ऑनलाइन | ग्राहक: मोबाइल यूज़र"
+    },
+    {
+        id: 3,
+        icon: "🎁",
+        title: "Customized Gifts",
+        category: "Online",
+        cost: "कम लागत",
+        desc: "नाम और फोटो वाले मग, टी-शर्ट और गिफ्ट आइटम बेचें।",
+        details: "शुरुआत: ऑनलाइन | ग्राहक: गिफ्ट खरीदने वाले"
+    },
+    {
+        id: 4,
+        icon: "💻",
+        title: "Freelancing",
+        category: "Online",
+        cost: "कम लागत",
+        desc: "ग्राहकों के लिए वेबसाइट, डिजाइन या कंटेंट बनाने की सेवाएँ दें।",
+        details: "शुरुआत: घर से | जरूरी: संबंधित स्किल"
+    },
+    {
+        id: 5,
+        icon: "🍰",
+        title: "Home Bakery",
+        category: "Food",
+        cost: "मध्यम लागत",
+        desc: "घर पर केक, कुकीज और अन्य बेकरी उत्पाद बनाकर बेचें।",
+        details: "शुरुआत: घर से | ग्राहक: स्थानीय लोग"
+    },
+    {
+        id: 6,
+        icon: "🛍️",
+        title: "Online Store",
+        category: "Online",
+        cost: "मध्यम लागत",
+        desc: "कपड़े, घरेलू सामान या अन्य उत्पादों की ऑनलाइन बिक्री करें।",
+        details: "शुरुआत: ऑनलाइन | जरूरी: उत्पाद और डिलीवरी"
+    },
+    {
+        id: 7,
+        icon: "🖨️",
+        title: "Printing Service",
+        category: "Low",
+        cost: "मध्यम लागत",
+        desc: "स्थानीय ग्राहकों के लिए फोटो, डॉक्यूमेंट और कार्ड प्रिंट करें।",
+        details: "शुरुआत: दुकान से | ग्राहक: स्थानीय लोग"
+    },
+    {
+        id: 8,
+        icon: "🥤",
+        title: "Juice Corner",
+        category: "Food",
+        cost: "मध्यम लागत",
+        desc: "ताजे जूस और अन्य पेय पदार्थ बेचने का छोटा कारोबार शुरू करें।",
+        details: "शुरुआत: दुकान या स्टॉल | ग्राहक: स्थानीय लोग"
+    },
+    {
+        id: 9,
+        icon: "📚",
+        title: "Online Tuition",
+        category: "Online",
+        cost: "कम लागत",
+        desc: "अपनी जानकारी के अनुसार विद्यार्थियों को ऑनलाइन पढ़ाएँ।",
+        details: "शुरुआत: घर से | जरूरी: विषय का ज्ञान"
+    }
+];
+
+let activeCategory = "All";
+
+function getSaved() {
+    try {
+        return JSON.parse(localStorage.getItem("businessSaved")) || [];
+    } catch {
+        return [];
+    }
+}
+
+function toggleSave(id) {
+    let saved = getSaved();
+
+    if (saved.includes(id)) {
+        saved = saved.filter(item => item !== id);
+    } else {
+        saved.push(id);
+    }
+
+    localStorage.setItem("businessSaved", JSON.stringify(saved));
+    renderIdeas();
+}
+
+function renderIdeas() {
+    const query = document.getElementById("search").value.toLowerCase();
+
+    const filtered = businessIdeas.filter(idea => {
+        const categoryMatch =
+            activeCategory === "All" ||
+            idea.category === activeCategory;
+
+        const searchMatch =
+            (idea.title + " " + idea.desc)
+            .toLowerCase().includes(query);
+
+        return categoryMatch && searchMatch;
+    });
+
+    const saved = getSaved();
+
+    document.getElementById("cards").innerHTML =
+        filtered.length
+        ? filtered.map(idea => `
+            <div class="card">
+                <div class="icon">${idea.icon}</div>
+                <span class="tag">${idea.cost}</span>
+                <h3>${idea.title}</h3>
+                <p>${idea.desc}</p>
+                <div class="details">${idea.details}</div>
+                <div class="actions">
+                    <button class="save"
+                        onclick="toggleSave(${idea.id})">
+                        ${saved.includes(idea.id) ? "❤️ Saved" : "🤍 Save"}
+                    </button>
+                    <button class="more"
+                        onclick="showDetails(${idea.id})">
+                        और जानें ➜
+                    </button>
+                </div>
+            </div>
+        `).join("")
+        : `<div class="empty">😕 कोई आइडिया नहीं मिला।</div>`;
+}
+
+function filterIdeas(category, button) {
+    activeCategory = category;
+
+    document.querySelectorAll(".filters button")
+        .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+    renderIdeas();
+}
+
+function searchIdeas() {
+    renderIdeas();
+}
+
+function showDetails(id) {
+    const idea = businessIdeas.find(item => item.id === id);
+
+    alert(
+        "💼 " + idea.title + "\n\n" +
+        idea.desc + "\n\n" +
+        idea.details + "\n\n" +
+        "नोट: लागत और कमाई आपके क्षेत्र और कारोबार के अनुसार अलग-अलग होगी।"
+    );
+}
+
+document.getElementById("search").addEventListener("keydown", event => {
+    if (event.key === "Enter") searchIdeas();
+});
+
+renderIdeas();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><!DOCTYPE html>
+
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Hub | IDEA GENIUS</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#0b1020;color:white;min-height:100vh}
+header{background:#141b33;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;border-bottom:1px solid #303957}
+.logo{font-size:25px;font-weight:bold;color:#a78bfa}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:#dbe3ff;text-decoration:none;font-size:14px}
+nav a:hover{color:#a78bfa}
+.container{max-width:1100px;margin:45px auto;padding:20px}
+.hero{text-align:center;margin-bottom:35px}
+.hero h1{font-size:38px;margin-bottom:12px}
+.hero h1 span{color:#a78bfa}
+.hero p{color:#aab4d0;line-height:1.7}
+.section-title{font-size:25px;margin:35px 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#151d36;border:1px solid #303957;border-radius:16px;padding:23px;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:#8b5cf6}
+.icon{font-size:35px;margin-bottom:15px}
+.card h2{font-size:20px;margin-bottom:12px;color:#c4b5fd}
+.card p{font-size:14px;color:#b9c4df;line-height:1.7}
+.card ul{padding-left:20px;margin-top:13px;color:#dbe3ff;font-size:14px;line-height:1.9}
+button{border:0;border-radius:9px;padding:12px 17px;background:#8b5cf6;color:white;font-weight:bold;cursor:pointer;margin-top:18px}
+button:hover{background:#7444e8}
+.tip{margin-top:35px;background:#1b2441;border:1px solid #394566;padding:25px;border-radius:16px}
+.tip h2{color:#a78bfa;margin-bottom:12px}
+.tip p{color:#dbe3ff;line-height:1.7}
+footer{text-align:center;padding:25px;color:#8994b5;border-top:1px solid #303957;margin-top:50px}
+@media(max-width:600px){.hero h1{font-size:29px}.container{margin:25px auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">💡 IDEA GENIUS</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="business.html">Business</a>
+    <a href="youtube.html">YouTube</a>
+    <a href="website.html">Website</a>
+    <a href="ai.html">AI Generator</a>
+    <a href="saved.html">Saved Ideas</a>
+    <a href="trending.html">Trending</a>
+    <a href="learning.html">Learning</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>📚 <span>Learning Hub</span></h1>
+    <p>नई स्किल सीखें, नए आइडिया पर काम करें और अपने ज्ञान को बढ़ाएँ।<br>शुरुआत करने के लिए नीचे दिए गए विषय चुनें।</p>
+  </section>
+
+  <h2 class="section-title">🚀 सीखने के विषय</h2>
+
+  <section class="grid">
+    <article class="card">
+      <div class="icon">💻</div>
+      <h2>Website Development</h2>
+      <p>अपनी वेबसाइट बनाना सीखें। HTML, CSS और JavaScript से शुरुआत करें।</p>
+      <ul>
+        <li>HTML की बुनियादी जानकारी</li>
+        <li>CSS से डिजाइन बनाना</li>
+        <li>JavaScript से वेबसाइट में काम करवाना</li>
+      </ul>
+      <button onclick="showLesson('web')">सीखना शुरू करें</button>
+    </article>
+
+```
+<article class="card">
+  <div class="icon">📈</div>
+  <h2>Business Skills</h2>
+  <p>बिजनेस आइडिया को समझें और उसे शुरू करने की तैयारी करें।</p>
+  <ul>
+    <li>बिजनेस आइडिया चुनना</li>
+    <li>ग्राहकों की जरूरत समझना</li>
+    <li>खर्च और कमाई का हिसाब</li>
+  </ul>
+  <button onclick="showLesson('business')">सीखना शुरू करें</button>
+</article>
+
+<article class="card">
+  <div class="icon">▶️</div>
+  <h2>YouTube Creation</h2>
+  <p>YouTube वीडियो बनाने और चैनल की योजना तैयार करने की जानकारी लें।</p>
+  <ul>
+    <li>वीडियो के विषय चुनना</li>
+    <li>वीडियो रिकॉर्ड और एडिट करना</li>
+    <li>थंबनेल और टाइटल बनाना</li>
+  </ul>
+  <button onclick="showLesson('youtube')">सीखना शुरू करें</button>
+</article>
+
+<article class="card">
+  <div class="icon">🤖</div>
+  <h2>AI Tools</h2>
+  <p>AI टूल्स की मदद से आइडिया, लेख और डिजाइन बनाने के तरीके जानें।</p>
+  <ul>
+    <li>AI क्या है?</li>
+    <li>AI से आइडिया बनाना</li>
+    <li>AI का जिम्मेदारी से उपयोग</li>
+  </ul>
+  <button onclick="showLesson('ai')">सीखना शुरू करें</button>
+</article>
+```
+
+  </section>
+
+  <section class="tip">
+    <h2>💡 आज का सुझाव</h2>
+    <p>एक छोटा लक्ष्य चुनें और रोज थोड़ा समय सीखने में लगाएँ। सीखी हुई चीज़ को खुद करके देखें। अभ्यास से आपकी स्किल बेहतर हो सकती है।</p>
+  </section>
+
+  <section class="tip" id="lesson" style="display:none">
+    <h2 id="lessonTitle"></h2>
+    <p id="lessonText"></p>
+    <button onclick="document.getElementById('lesson').style.display='none'">बंद करें</button>
+  </section>
+</main>
+
+<footer>© 2026 IDEA GENIUS | Think • Create • Grow</footer>
+
+<script>
+const lessons={
+ web:{
+  title:"💻 Website Development — शुरुआत",
+  text:"वेबसाइट बनाने के लिए सबसे पहले HTML सीखें। HTML से पेज का ढाँचा बनता है। CSS से रंग और डिजाइन तय होता है। JavaScript से बटन और दूसरे फीचर काम करते हैं। VS Code में index.html नाम की फाइल बनाकर शुरुआत करें।"
+ },
+ business:{
+  title:"📈 Business Skills — शुरुआत",
+  text:"बिजनेस शुरू करने से पहले अपने आइडिया को समझें। पता करें कि आपके ग्राहक कौन होंगे, उन्हें किस चीज़ की जरूरत है और उस सेवा या सामान को देने में कितना खर्च आएगा। छोटे स्तर पर योजना बनाकर शुरुआत करें।"
+ },
+ youtube:{
+  title:"▶️ YouTube Creation — शुरुआत",
+  text:"सबसे पहले अपने चैनल का विषय चुनें। फिर वीडियो के लिए सरल स्क्रिप्ट लिखें। मोबाइल से वीडियो रिकॉर्ड कर सकते हैं। वीडियो का टाइटल और थंबनेल साफ और विषय से संबंधित रखें।"
+ },
+ ai:{
+  title:"🤖 AI Tools — शुरुआत",
+  text:"AI ऐसे टूल्स को कहा जाता है जो डेटा के आधार पर सवालों के जवाब देने और सामग्री बनाने जैसे काम कर सकते हैं। AI से आइडिया या ड्राफ्ट बनवाएँ, लेकिन जरूरी जानकारी की जाँच जरूर करें।"
+ }
+};
+
+function showLesson(type){
+ const lesson=lessons[type];
+ document.getElementById("lessonTitle").textContent=lesson.title;
+ document.getElementById("lessonText").textContent=lesson.text;
+ document.getElementById("lesson").style.display="block";
+ document.getElementById("lesson").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>

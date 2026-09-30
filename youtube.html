@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YouTube Ideas | IDEA GENIUS</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d25;
+    color: white;
+}
+
+header {
+    background: #101936;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #29365d;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffbd24;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #a47aff;
+}
+
+.hero {
+    padding: 70px 5%;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, #712c9b66, transparent 65%);
+}
+
+.hero .icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 50px);
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #ff3867;
+}
+
+.hero p {
+    color: #c4cce3;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.search {
+    display: flex;
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 6px;
+    background: #101936;
+    border: 1px solid #7855d8;
+    border-radius: 12px;
+}
+
+.search input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.search button {
+    padding: 12px 22px;
+    background: #ed315a;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.container {
+    padding: 40px 5%;
+}
+
+.heading {
+    margin-bottom: 25px;
+}
+
+.heading h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    color: #aebbd8;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.filters button {
+    padding: 11px 20px;
+    border-radius: 25px;
+    background: #172448;
+    color: white;
+    border: 1px solid #34446f;
+    cursor: pointer;
+}
+
+.filters button:hover,
+.filters button.active {
+    background: #ed315a;
+    border-color: #ed315a;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 22px;
+    background: #101936;
+    border: 1px solid #29365d;
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ed315a;
+}
+
+.card-icon {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 7px 12px;
+    margin-bottom: 14px;
+    border-radius: 20px;
+    background: #612035;
+    color: #ffb8ca;
+    font-size: 12px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #b5c1dc;
+    line-height: 1.7;
+    font-size: 14px;
+    min-height: 72px;
+}
+
+.details {
+    border-top: 1px solid #29365d;
+    padding-top: 14px;
+    margin-top: 15px;
+    color: #aebbd8;
+    font-size: 13px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.actions button {
+    flex: 1;
+    padding: 11px 8px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.save {
+    background: #26355b;
+    color: white;
+}
+
+.copy {
+    background: #ed315a;
+    color: white;
+}
+
+.actions button:hover {
+    opacity: .8;
+}
+
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 35px;
+    background: #101936;
+    border-radius: 15px;
+    color: #b5c1dc;
+}
+
+.tips {
+    margin-top: 40px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #51408b;
+    background: linear-gradient(130deg, #25145c, #101d45);
+    border-radius: 18px;
+}
+
+.tips h2 {
+    margin-bottom: 15px;
+}
+
+.tips p {
+    color: #c4cce3;
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    background: #101936;
+    border-top: 1px solid #29365d;
+    padding: 25px;
+    color: #aebbd8;
+    line-height: 2;
+}
+
+@media(max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero {
+        padding: 45px 5%;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .search {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">💡 IDEA <span>GENIUS</span></div>
+
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="business.html">💼 Business</a>
+        <a href="youtube.html">🎬 YouTube</a>
+        <a href="index.html#categories">🌐 Website</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="icon">🎬</div>
+
+    <h1>YouTube <span>Ideas</span></h1>
+
+    <p>
+        अपने YouTube चैनल के लिए नए और शानदार आइडिया खोजें।<br>
+        Shorts, Gaming, Education और Vlogging के आइडिया पाएँ।
+    </p>
+
+    <div class="search">
+        <input
+            type="text"
+            id="search"
+            placeholder="YouTube आइडिया खोजें..."
+        >
+        <button onclick="searchIdeas()">🔍 खोजें</button>
+    </div>
+</section>
+
+<section class="container">
+
+    <div class="heading">
+        <h2>🚀 YouTube वीडियो आइडिया</h2>
+        <p>अपनी पसंद की कैटेगरी चुनें और नए वीडियो आइडिया पाएँ।</p>
+    </div>
+
+    <div class="filters">
+        <button class="active" onclick="filterIdeas('All',this)">
+            सभी
+        </button>
+
+        <button onclick="filterIdeas('Shorts',this)">
+            📱 Shorts
+        </button>
+
+        <button onclick="filterIdeas('Gaming',this)">
+            🎮 Gaming
+        </button>
+
+        <button onclick="filterIdeas('Education',this)">
+            📚 Education
+        </button>
+
+        <button onclick="filterIdeas('Vlogging',this)">
+            🎥 Vlogging
+        </button>
+
+        <button onclick="filterIdeas('Tech',this)">
+            💻 Technology
+        </button>
+    </div>
+
+    <div class="cards" id="cards"></div>
+
+    <div class="tips">
+        <h2>💡 YouTube Creator Tips</h2>
+        <p>
+            वीडियो बनाने से पहले अपने दर्शकों की पसंद समझें।
+            आकर्षक Thumbnail बनाएँ और वीडियो का शीर्षक स्पष्ट रखें।
+            नियमित रूप से वीडियो अपलोड करें और दर्शकों की प्रतिक्रिया
+            से सीखें।
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    <strong>💡 IDEA GENIUS</strong><br>
+    Big Ideas • Better Future 🚀<br>
+    Made with ❤️ by Ronak<br>
+    © 2026 IDEA GENIUS
+</footer>
+
+<script>
+const youtubeIdeas = [
+    {
+        id: 1,
+        icon: "💻",
+        title: "Computer Shortcuts",
+        category: "Shorts",
+        desc: "Windows के 5 ऐसे कीबोर्ड शॉर्टकट बताइए जो हर कंप्यूटर यूज़र को जानने चाहिए।",
+        details: "वीडियो: 30-60 सेकंड"
+    },
+    {
+        id: 2,
+        icon: "🤖",
+        title: "Top 5 Free AI Tools",
+        category: "Shorts",
+        desc: "ऐसे 5 मुफ्त AI टूल दिखाएँ जो विद्यार्थियों और नए क्रिएटर्स के काम आ सकते हैं।",
+        details: "वीडियो: 30-60 सेकंड"
+    },
+    {
+        id: 3,
+        icon: "🎮",
+        title: "Gaming Challenge",
+        category: "Gaming",
+        desc: "अपने पसंदीदा गेम में एक कठिन चैलेंज पूरा करके उसका वीडियो बनाएँ।",
+        details: "वीडियो: 5-10 मिनट"
+    },
+    {
+        id: 4,
+        icon: "📚",
+        title: "Computer Basics",
+        category: "Education",
+        desc: "शुरुआती लोगों को कंप्यूटर चलाना और जरूरी फीचर्स इस्तेमाल करना सिखाएँ।",
+        details: "वीडियो: 5-10 मिनट"
+    },
+    {
+        id: 5,
+        icon: "🎥",
+        title: "A Day in My Village",
+        category: "Vlogging",
+        desc: "अपने गाँव की सुबह से शाम तक की जिंदगी दिखाते हुए एक व्लॉग बनाएँ।",
+        details: "वीडियो: 5-15 मिनट"
+    },
+    {
+        id: 6,
+        icon: "📱",
+        title: "Mobile Hidden Features",
+        category: "Shorts",
+        desc: "मोबाइल की उपयोगी सेटिंग्स और कम जाने जाने वाले फीचर्स दिखाएँ।",
+        details: "वीडियो: 30-60 सेकंड"
+    },
+    {
+        id: 7,
+        icon: "🌐",
+        title: "Make Your First Website",
+        category: "Tech",
+        desc: "HTML की मदद से शुरुआत से अपनी पहली वेबसाइट बनाकर दिखाएँ।",
+        details: "वीडियो: 10-15 मिनट"
+    },
+    {
+        id: 8,
+        icon: "🎮",
+        title: "Gaming Tips and Tricks",
+        category: "Gaming",
+        desc: "अपने पसंदीदा गेम में काम आने वाली ट्रिक्स और टिप्स बताएँ।",
+        details: "वीडियो: 5-10 मिनट"
+    },
+    {
+        id: 9,
+        icon: "🧠",
+        title: "Interesting Facts",
+        category: "Shorts",
+        desc: "दुनिया के 5 रोचक तथ्यों पर एक जानकारीपूर्ण शॉर्ट वीडियो बनाएँ।",
+        details: "वीडियो: 30-60 सेकंड"
+    },
+    {
+        id: 10,
+        icon: "🎓",
+        title: "Learn Coding in Hindi",
+        category: "Education",
+        desc: "HTML, CSS और JavaScript को आसान हिंदी में समझाने वाली सीरीज बनाएँ।",
+        details: "वीडियो: 10-20 मिनट"
+    },
+    {
+        id: 11,
+        icon: "🍲",
+        title: "Village Food Vlog",
+        category: "Vlogging",
+        desc: "गाँव के पारंपरिक खाने को बनाने और चखने का वीडियो बनाएँ।",
+        details: "वीडियो: 5-15 मिनट"
+    },
+    {
+        id: 12,
+        icon: "🖥️",
+        title: "Best Free Software",
+        category: "Tech",
+        desc: "कंप्यूटर के लिए उपयोगी मुफ्त सॉफ्टवेयर के बारे में बताएँ।",
+        details: "वीडियो: 5-10 मिनट"
+    }
+];
+
+let activeCategory = "All";
+
+function getSaved() {
+    try {
+        return JSON.parse(localStorage.getItem("youtubeSaved")) || [];
+    } catch {
+        return [];
+    }
+}
+
+function toggleSave(id) {
+    let saved = getSaved();
+
+    if (saved.includes(id)) {
+        saved = saved.filter(item => item !== id);
+    } else {
+        saved.push(id);
+    }
+
+    localStorage.setItem("youtubeSaved", JSON.stringify(saved));
+    renderIdeas();
+}
+
+function renderIdeas() {
+    const query = document
+        .getElementById("search")
+        .value.toLowerCase();
+
+    const filtered = youtubeIdeas.filter(idea => {
+        const categoryMatch =
+            activeCategory === "All" ||
+            idea.category === activeCategory;
+
+        const searchMatch =
+            (idea.title + " " + idea.desc + " " + idea.category)
+            .toLowerCase()
+            .includes(query);
+
+        return categoryMatch && searchMatch;
+    });
+
+    const saved = getSaved();
+
+    document.getElementById("cards").innerHTML =
+        filtered.length
+        ? filtered.map(idea => `
+            <div class="card">
+                <div class="card-icon">${idea.icon}</div>
+
+                <span class="tag">${idea.category}</span>
+
+                <h3>${idea.title}</h3>
+
+                <p>${idea.desc}</p>
+
+                <div class="details">
+                    ⏱️ ${idea.details}
+                </div>
+
+                <div class="actions">
+                    <button class="save"
+                        onclick="toggleSave(${idea.id})">
+                        ${saved.includes(idea.id) ? "❤️ Saved" : "🤍 Save"}
+                    </button>
+
+                    <button class="copy"
+                        onclick="copyIdea(${idea.id})">
+                        📋 Copy
+                    </button>
+                </div>
+            </div>
+        `).join("")
+        : `<div class="empty">😕 कोई आइडिया नहीं मिला।</div>`;
+}
+
+function filterIdeas(category, button) {
+    activeCategory = category;
+
+    document.querySelectorAll(".filters button")
+        .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+    renderIdeas();
+}
+
+function searchIdeas() {
+    renderIdeas();
+}
+
+async function copyIdea(id) {
+    const idea = youtubeIdeas.find(item => item.id === id);
+
+    const text =
+        idea.title + "\n\n" +
+        idea.desc + "\n\n" +
+        "Category: " + idea.category;
+
+    try {
+        await navigator.clipboard.writeText(text);
+        alert("✅ आइडिया कॉपी हो गया!");
+    } catch {
+        prompt("इस आइडिया को कॉपी करें:", text);
+    }
+}
+
+document.getElementById("search").addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+        searchIdeas();
+    }
+});
+
+renderIdeas();
+</script>
+
+</body>
+</html>
