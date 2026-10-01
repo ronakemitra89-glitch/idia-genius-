@@ -1,541 +1,788 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html><!DOCTYPE html>
-<html lang="hi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Ideas | IDEA GENIUS</title>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <title>Business Ideas | IDEA GENIUS</title>
+    <meta name="description" content="IDEA GENIUS पर नए बिजनेस आइडिया खोजें। कम लागत, ऑनलाइन और फूड बिजनेस के आइडिया हिंदी में जानें।">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#080d25">
 
-body {
-    font-family: Arial, sans-serif;
-    background: #080d25;
-    color: white;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header {
-    background: #101936;
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #29365d;
-}
+        :root {
+            --bg: #080d25;
+            --card: #101936;
+            --text: #ffffff;
+            --muted: #b9c5e0;
+            --border: #25365f;
+            --primary: #713cff;
+            --accent: #ffbd24;
+            --input: #080d25;
+        }
 
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-}
+        body.light {
+            --bg: #f2f5ff;
+            --card: #ffffff;
+            --text: #101936;
+            --muted: #58647c;
+            --border: #d7def0;
+            --primary: #713cff;
+            --accent: #a56b00;
+            --input: #f8f9ff;
+        }
 
-.logo span {
-    color: #ffbd24;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            transition: background 0.3s, color 0.3s;
+        }
 
-nav {
-    display: flex;
-    gap: 20px;
-}
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-}
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: var(--text);
+            text-decoration: none;
+        }
 
-nav a:hover {
-    color: #a47aff;
-}
+        .logo span {
+            color: var(--accent);
+        }
 
-.hero {
-    padding: 65px 5%;
-    text-align: center;
-    background: radial-gradient(circle, #402080, #080d25 70%);
-}
+        nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
 
-.hero h1 {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
 
-.hero h1 span {
-    color: #ffbd24;
-}
+        nav a:hover,
+        nav a.active {
+            color: var(--primary);
+        }
 
-.hero p {
-    color: #c4cce3;
-    font-size: 17px;
-    line-height: 1.7;
-}
+        .theme-btn {
+            background: var(--bg);
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 9px 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+        }
 
-.search {
-    margin: 30px auto;
-    display: flex;
-    max-width: 550px;
-    background: #101936;
-    border: 1px solid #7855d8;
-    border-radius: 12px;
-    padding: 6px;
-}
+        .hero {
+            padding: 65px 5% 55px;
+            text-align: center;
+            background: radial-gradient(circle at top, #402080, var(--bg) 70%);
+        }
 
-.search input {
-    flex: 1;
-    min-width: 0;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 12px;
-}
+        .badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #865cff;
+            background: rgba(113, 60, 255, 0.15);
+            color: #c7b4ff;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
 
-.search button {
-    background: #713cff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    cursor: pointer;
-}
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
 
-.container {
-    padding: 40px 5%;
-}
+        .hero h1 span {
+            color: var(--accent);
+        }
 
-.heading {
-    margin-bottom: 25px;
-}
+        .hero p {
+            color: #c4cce3;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: auto;
+        }
 
-.heading h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
+        .search {
+            margin: 30px auto 0;
+            display: flex;
+            max-width: 600px;
+            background: var(--card);
+            border: 1px solid #7855d8;
+            border-radius: 12px;
+            padding: 6px;
+            gap: 5px;
+        }
 
-.heading p {
-    color: #aebbd8;
-}
+        .search input {
+            flex: 1;
+            min-width: 0;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text);
+            padding: 12px;
+            font-size: 15px;
+        }
 
-.filters {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
-}
+        .search input::placeholder {
+            color: var(--muted);
+        }
 
-.filters button {
-    background: #172448;
-    color: white;
-    border: 1px solid #34446f;
-    border-radius: 20px;
-    padding: 11px 20px;
-    cursor: pointer;
-}
+        .search button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-.filters button.active,
-.filters button:hover {
-    background: #713cff;
-    border-color: #713cff;
-}
+        .container {
+            max-width: 1250px;
+            margin: auto;
+            padding: 45px 5%;
+        }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
+        .heading {
+            margin-bottom: 25px;
+        }
 
-.card {
-    background: #101936;
-    border: 1px solid #28365f;
-    border-radius: 16px;
-    padding: 22px;
-    transition: .3s;
-}
+        .heading h2 {
+            font-size: 29px;
+            margin-bottom: 10px;
+        }
 
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #8855ff;
-}
+        .heading p {
+            color: var(--muted);
+            line-height: 1.7;
+        }
 
-.icon {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
+        .filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
 
-.tag {
-    background: #164d40;
-    color: #66f0c1;
-    padding: 7px 12px;
-    display: inline-block;
-    border-radius: 20px;
-    font-size: 12px;
-    margin-bottom: 15px;
-}
+        .filters button {
+            background: var(--card);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            padding: 11px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-.card h3 {
-    font-size: 21px;
-    margin-bottom: 12px;
-}
+        .filters button.active,
+        .filters button:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
 
-.card p {
-    color: #b5c1dc;
-    line-height: 1.7;
-    font-size: 14px;
-    min-height: 72px;
-}
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
 
-.details {
-    border-top: 1px solid #29365d;
-    padding-top: 15px;
-    margin-top: 15px;
-    color: #aebbd8;
-    font-size: 13px;
-    line-height: 2;
-}
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            padding: 23px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, border-color 0.3s;
+        }
 
-.actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 18px;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
 
-.actions button {
-    flex: 1;
-    padding: 11px 8px;
-    border: none;
-    border-radius: 9px;
-    cursor: pointer;
-    font-weight: bold;
-}
+        .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
 
-.save {
-    background: #26355b;
-    color: white;
-}
+        .tag {
+            background: rgba(22, 150, 105, 0.15);
+            color: #42dba5;
+            border: 1px solid rgba(66, 219, 165, 0.25);
+            padding: 7px 12px;
+            display: inline-block;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 14px;
+            width: fit-content;
+        }
 
-.more {
-    background: #713cff;
-    color: white;
-}
+        .card h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
 
-.empty {
-    grid-column: 1/-1;
-    text-align: center;
-    padding: 35px;
-    color: #b5c1dc;
-}
+        .card p {
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 14px;
+            flex-grow: 1;
+        }
 
-.info {
-    margin-top: 45px;
-    padding: 30px;
-    text-align: center;
-    border: 1px solid #51408b;
-    background: #17183d;
-    border-radius: 18px;
-}
+        .details {
+            border-top: 1px solid var(--border);
+            padding-top: 14px;
+            margin-top: 16px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.8;
+        }
 
-.info h2 {
-    margin-bottom: 12px;
-}
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+        }
 
-.info p {
-    color: #c4cce3;
-    line-height: 1.7;
-}
+        .actions button {
+            flex: 1;
+            padding: 11px 8px;
+            border: none;
+            border-radius: 9px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+            transition: 0.2s;
+        }
 
-footer {
-    text-align: center;
-    background: #101936;
-    border-top: 1px solid #29365d;
-    padding: 25px;
-    color: #aebbd8;
-    line-height: 2;
-}
+        .actions button:hover {
+            transform: translateY(-2px);
+        }
 
-@media(max-width: 900px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+        .save {
+            background: #26355b;
+            color: white;
+        }
 
-@media(max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 18px;
-    }
+        .more {
+            background: var(--primary);
+            color: white;
+        }
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
+        .empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 45px 20px;
+            color: var(--muted);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
 
-    .hero h1 {
-        font-size: 32px;
-    }
+        .info {
+            margin-top: 50px;
+            padding: 32px;
+            text-align: center;
+            border: 1px solid #51408b;
+            background: rgba(113, 60, 255, 0.10);
+            border-radius: 18px;
+        }
 
-    .cards {
-        grid-template-columns: 1fr;
-    }
+        .info h2 {
+            margin-bottom: 12px;
+        }
 
-    .search {
-        flex-direction: column;
-        gap: 5px;
-    }
-}
-</style>
+        .info p {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .info a {
+            display: inline-block;
+            margin-top: 20px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 9px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 25px 15px;
+            color: var(--muted);
+            line-height: 2;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        @media (max-width: 950px) {
+            .cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 13px;
+            }
+
+            .hero {
+                padding: 45px 5%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .search {
+                flex-direction: column;
+            }
+
+            .search button {
+                width: 100%;
+            }
+
+            .container {
+                padding: 35px 5%;
+            }
+
+            .heading h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">💡 IDEA <span>GENIUS</span></div>
+    <a href="index.html" class="logo">💡 IDEA <span>GENIUS</span></a>
 
     <nav>
         <a href="index.html">🏠 Home</a>
-        <a href="business.html">💼 Business</a>
-        <a href="index.html#categories">🎬 YouTube</a>
-        <a href="index.html#categories">🌐 Website</a>
+        <a href="business.html" class="active">💼 Business</a>
+        <a href="youtube.html">🎬 YouTube</a>
+        <a href="website.html">🌐 Website</a>
+        <a href="ai.html">✨ AI Generator</a>
+        <a href="saved.html">❤️ Saved Ideas</a>
     </nav>
+
+    <button class="theme-btn" onclick="toggleTheme()" title="Change Theme">
+        🌙
+    </button>
 </header>
 
 <section class="hero">
+    <div class="badge">💼 BUSINESS IDEA CENTER</div>
+
     <h1>💼 Business <span>Ideas</span></h1>
+
     <p>
         अपना खुद का बिजनेस शुरू करने के लिए नए आइडिया खोजें।<br>
         छोटे बिजनेस से लेकर ऑनलाइन बिजनेस तक।
     </p>
 
     <div class="search">
-        <input type="text" id="search"
-               placeholder="बिजनेस आइडिया खोजें...">
+        <input
+            type="search"
+            id="search"
+            placeholder="बिजनेस आइडिया खोजें..."
+            aria-label="बिजनेस आइडिया खोजें"
+        >
         <button onclick="searchIdeas()">खोजें 🔍</button>
     </div>
 </section>
 
-<section class="container">
+<main class="container">
 
     <div class="heading">
         <h2>🚀 बिजनेस आइडिया</h2>
-        <p>अपनी पसंद की कैटेगरी चुनें और आइडिया देखें।</p>
+        <p>अपनी पसंद की कैटेगरी चुनें और नया बिजनेस आइडिया देखें।</p>
     </div>
 
     <div class="filters">
-        <button class="active" onclick="filterIdeas('All',this)">सभी</button>
-        <button onclick="filterIdeas('Low',this)">कम लागत</button>
-        <button onclick="filterIdeas('Online',this)">ऑनलाइन</button>
-        <button onclick="filterIdeas('Food',this)">फूड बिजनेस</button>
+        <button class="active" onclick="filterIdeas('All', this)">सभी</button>
+        <button onclick="filterIdeas('Low', this)">कम लागत</button>
+        <button onclick="filterIdeas('Online', this)">ऑनलाइन</button>
+        <button onclick="filterIdeas('Food', this)">फूड बिजनेस</button>
     </div>
 
     <div class="cards" id="cards"></div>
 
-    <div class="info">
+    <section class="info">
         <h2>💡 अपना बिजनेस शुरू करें!</h2>
         <p>
             किसी भी बिजनेस को शुरू करने से पहले उसकी लागत,
             बाजार की मांग और जरूरी लाइसेंस की जानकारी जरूर लें।
+            बिजनेस की कमाई की कोई गारंटी नहीं होती।
         </p>
-    </div>
 
-</section>
+        <a href="ai.html">✨ और बिजनेस आइडिया पाएँ</a>
+    </section>
+
+</main>
 
 <footer>
     <strong>💡 IDEA GENIUS</strong><br>
     Big Ideas • Better Future 🚀<br>
     Made with ❤️ by Ronak<br>
     © 2026 IDEA GENIUS
+
+    <p>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </p>
 </footer>
 
 <script>
-const businessIdeas = [
-    {
-        id: 1,
-        icon: "🍱",
-        title: "Tiffin Service",
-        category: "Food",
-        cost: "कम लागत",
-        desc: "ऑफिस और कॉलेज जाने वाले लोगों को घर का बना खाना उपलब्ध कराएँ।",
-        details: "शुरुआत: घर से | ग्राहक: विद्यार्थी और कर्मचारी"
-    },
-    {
-        id: 2,
-        icon: "📱",
-        title: "Mobile Accessories",
-        category: "Low",
-        cost: "मध्यम लागत",
-        desc: "मोबाइल कवर, चार्जर, ईयरफोन और अन्य एक्सेसरीज़ बेचें।",
-        details: "शुरुआत: दुकान या ऑनलाइन | ग्राहक: मोबाइल यूज़र"
-    },
-    {
-        id: 3,
-        icon: "🎁",
-        title: "Customized Gifts",
-        category: "Online",
-        cost: "कम लागत",
-        desc: "नाम और फोटो वाले मग, टी-शर्ट और गिफ्ट आइटम बेचें।",
-        details: "शुरुआत: ऑनलाइन | ग्राहक: गिफ्ट खरीदने वाले"
-    },
-    {
-        id: 4,
-        icon: "💻",
-        title: "Freelancing",
-        category: "Online",
-        cost: "कम लागत",
-        desc: "ग्राहकों के लिए वेबसाइट, डिजाइन या कंटेंट बनाने की सेवाएँ दें।",
-        details: "शुरुआत: घर से | जरूरी: संबंधित स्किल"
-    },
-    {
-        id: 5,
-        icon: "🍰",
-        title: "Home Bakery",
-        category: "Food",
-        cost: "मध्यम लागत",
-        desc: "घर पर केक, कुकीज और अन्य बेकरी उत्पाद बनाकर बेचें।",
-        details: "शुरुआत: घर से | ग्राहक: स्थानीय लोग"
-    },
-    {
-        id: 6,
-        icon: "🛍️",
-        title: "Online Store",
-        category: "Online",
-        cost: "मध्यम लागत",
-        desc: "कपड़े, घरेलू सामान या अन्य उत्पादों की ऑनलाइन बिक्री करें।",
-        details: "शुरुआत: ऑनलाइन | जरूरी: उत्पाद और डिलीवरी"
-    },
-    {
-        id: 7,
-        icon: "🖨️",
-        title: "Printing Service",
-        category: "Low",
-        cost: "मध्यम लागत",
-        desc: "स्थानीय ग्राहकों के लिए फोटो, डॉक्यूमेंट और कार्ड प्रिंट करें।",
-        details: "शुरुआत: दुकान से | ग्राहक: स्थानीय लोग"
-    },
-    {
-        id: 8,
-        icon: "🥤",
-        title: "Juice Corner",
-        category: "Food",
-        cost: "मध्यम लागत",
-        desc: "ताजे जूस और अन्य पेय पदार्थ बेचने का छोटा कारोबार शुरू करें।",
-        details: "शुरुआत: दुकान या स्टॉल | ग्राहक: स्थानीय लोग"
-    },
-    {
-        id: 9,
-        icon: "📚",
-        title: "Online Tuition",
-        category: "Online",
-        cost: "कम लागत",
-        desc: "अपनी जानकारी के अनुसार विद्यार्थियों को ऑनलाइन पढ़ाएँ।",
-        details: "शुरुआत: घर से | जरूरी: विषय का ज्ञान"
+    const businessIdeas = [
+        {
+            id: 1,
+            icon: "🍱",
+            title: "Tiffin Service",
+            category: "Food",
+            cost: "कम लागत",
+            desc: "ऑफिस और कॉलेज जाने वाले लोगों को घर का बना खाना उपलब्ध कराएँ।",
+            details: "शुरुआत: घर से | ग्राहक: विद्यार्थी और कर्मचारी"
+        },
+        {
+            id: 2,
+            icon: "📱",
+            title: "Mobile Accessories",
+            category: "Low",
+            cost: "मध्यम लागत",
+            desc: "मोबाइल कवर, चार्जर, ईयरफोन और अन्य एक्सेसरीज़ बेचें।",
+            details: "शुरुआत: दुकान या ऑनलाइन | ग्राहक: मोबाइल यूज़र"
+        },
+        {
+            id: 3,
+            icon: "🎁",
+            title: "Customized Gifts",
+            category: "Online",
+            cost: "कम लागत",
+            desc: "नाम और फोटो वाले मग, टी-शर्ट और गिफ्ट आइटम बेचें।",
+            details: "शुरुआत: ऑनलाइन | ग्राहक: गिफ्ट खरीदने वाले"
+        },
+        {
+            id: 4,
+            icon: "💻",
+            title: "Freelancing",
+            category: "Online",
+            cost: "कम लागत",
+            desc: "ग्राहकों के लिए वेबसाइट, डिजाइन या कंटेंट बनाने की सेवाएँ दें।",
+            details: "शुरुआत: घर से | जरूरी: संबंधित स्किल"
+        },
+        {
+            id: 5,
+            icon: "🍰",
+            title: "Home Bakery",
+            category: "Food",
+            cost: "मध्यम लागत",
+            desc: "घर पर केक, कुकीज और अन्य बेकरी उत्पाद बनाकर बेचें।",
+            details: "शुरुआत: घर से | ग्राहक: स्थानीय लोग"
+        },
+        {
+            id: 6,
+            icon: "🛍️",
+            title: "Online Store",
+            category: "Online",
+            cost: "मध्यम लागत",
+            desc: "कपड़े, घरेलू सामान या अन्य उत्पादों की ऑनलाइन बिक्री करें।",
+            details: "शुरुआत: ऑनलाइन | जरूरी: उत्पाद और डिलीवरी"
+        },
+        {
+            id: 7,
+            icon: "🖨️",
+            title: "Printing Service",
+            category: "Low",
+            cost: "मध्यम लागत",
+            desc: "स्थानीय ग्राहकों के लिए फोटो, डॉक्यूमेंट और कार्ड प्रिंट करें।",
+            details: "शुरुआत: दुकान से | ग्राहक: स्थानीय लोग"
+        },
+        {
+            id: 8,
+            icon: "🥤",
+            title: "Juice Corner",
+            category: "Food",
+            cost: "मध्यम लागत",
+            desc: "ताजे जूस और अन्य पेय पदार्थ बेचने का छोटा कारोबार शुरू करें।",
+            details: "शुरुआत: दुकान या स्टॉल | ग्राहक: स्थानीय लोग"
+        },
+        {
+            id: 9,
+            icon: "📚",
+            title: "Online Tuition",
+            category: "Online",
+            cost: "कम लागत",
+            desc: "अपनी जानकारी के अनुसार विद्यार्थियों को ऑनलाइन पढ़ाएँ।",
+            details: "शुरुआत: घर से | जरूरी: विषय का ज्ञान"
+        },
+        {
+            id: 10,
+            icon: "📸",
+            title: "Photography Service",
+            category: "Low",
+            cost: "मध्यम लागत",
+            desc: "स्थानीय कार्यक्रमों, दुकानों और उत्पादों की फोटोग्राफी की सेवा दें।",
+            details: "शुरुआत: कैमरा या अच्छे मोबाइल से | ग्राहक: स्थानीय लोग"
+        },
+        {
+            id: 11,
+            icon: "🌱",
+            title: "Plant Nursery",
+            category: "Low",
+            cost: "मध्यम लागत",
+            desc: "छोटे पौधे, गमले और बागवानी से जुड़ी चीजें बेचें।",
+            details: "शुरुआत: घर या छोटी दुकान से | ग्राहक: पौधों के शौकीन"
+        },
+        {
+            id: 12,
+            icon: "🎨",
+            title: "Graphic Design",
+            category: "Online",
+            cost: "कम लागत",
+            desc: "दुकानों और छोटे व्यवसायों के लिए पोस्टर, लोगो और सोशल मीडिया डिजाइन बनाएँ।",
+            details: "शुरुआत: घर से | जरूरी: डिजाइन स्किल"
+        }
+    ];
+
+    let activeCategory = "All";
+
+    function getSaved() {
+        try {
+            const saved = JSON.parse(
+                localStorage.getItem("businessSaved")
+            );
+
+            return Array.isArray(saved) ? saved : [];
+        } catch (error) {
+            return [];
+        }
     }
-];
 
-let activeCategory = "All";
+    function toggleSave(id) {
+        let saved = getSaved();
 
-function getSaved() {
-    try {
-        return JSON.parse(localStorage.getItem("businessSaved")) || [];
-    } catch {
-        return [];
-    }
-}
+        if (saved.includes(id)) {
+            saved = saved.filter(item => item !== id);
+        } else {
+            saved.push(id);
+        }
 
-function toggleSave(id) {
-    let saved = getSaved();
+        localStorage.setItem(
+            "businessSaved",
+            JSON.stringify(saved)
+        );
 
-    if (saved.includes(id)) {
-        saved = saved.filter(item => item !== id);
-    } else {
-        saved.push(id);
+        renderIdeas();
     }
 
-    localStorage.setItem("businessSaved", JSON.stringify(saved));
-    renderIdeas();
-}
+    function renderIdeas() {
+        const query = document
+            .getElementById("search")
+            .value
+            .trim()
+            .toLowerCase();
 
-function renderIdeas() {
-    const query = document.getElementById("search").value.toLowerCase();
+        const filtered = businessIdeas.filter(idea => {
+            const categoryMatch =
+                activeCategory === "All" ||
+                idea.category === activeCategory;
 
-    const filtered = businessIdeas.filter(idea => {
-        const categoryMatch =
-            activeCategory === "All" ||
-            idea.category === activeCategory;
+            const searchText = (
+                idea.title + " " +
+                idea.desc + " " +
+                idea.details + " " +
+                idea.cost
+            ).toLowerCase();
 
-        const searchMatch =
-            (idea.title + " " + idea.desc)
-            .toLowerCase().includes(query);
+            const searchMatch = searchText.includes(query);
 
-        return categoryMatch && searchMatch;
-    });
+            return categoryMatch && searchMatch;
+        });
 
-    const saved = getSaved();
+        const saved = getSaved();
+        const cards = document.getElementById("cards");
 
-    document.getElementById("cards").innerHTML =
-        filtered.length
-        ? filtered.map(idea => `
-            <div class="card">
+        if (filtered.length === 0) {
+            cards.innerHTML = `
+                <div class="empty">
+                    <h2>😕 कोई आइडिया नहीं मिला</h2>
+                    <p>दूसरा शब्द लिखकर खोजें या दूसरी कैटेगरी चुनें।</p>
+                </div>
+            `;
+            return;
+        }
+
+        cards.innerHTML = filtered.map(idea => `
+            <article class="card">
                 <div class="icon">${idea.icon}</div>
+
                 <span class="tag">${idea.cost}</span>
-                <h3>${idea.title}</h3>
-                <p>${idea.desc}</p>
-                <div class="details">${idea.details}</div>
+
+                <h3>${escapeHTML(idea.title)}</h3>
+
+                <p>${escapeHTML(idea.desc)}</p>
+
+                <div class="details">
+                    ${escapeHTML(idea.details)}
+                </div>
+
                 <div class="actions">
-                    <button class="save"
-                        onclick="toggleSave(${idea.id})">
+                    <button
+                        class="save"
+                        onclick="toggleSave(${idea.id})"
+                        aria-label="आइडिया सेव करें"
+                    >
                         ${saved.includes(idea.id) ? "❤️ Saved" : "🤍 Save"}
                     </button>
-                    <button class="more"
-                        onclick="showDetails(${idea.id})">
+
+                    <button
+                        class="more"
+                        onclick="showDetails(${idea.id})"
+                    >
                         और जानें ➜
                     </button>
                 </div>
-            </div>
-        `).join("")
-        : `<div class="empty">😕 कोई आइडिया नहीं मिला।</div>`;
-}
+            </article>
+        `).join("");
+    }
 
-function filterIdeas(category, button) {
-    activeCategory = category;
+    function escapeHTML(text) {
+        return String(text).replace(/[&<>"']/g, function(character) {
+            const entities = {
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;"
+            };
 
-    document.querySelectorAll(".filters button")
-        .forEach(btn => btn.classList.remove("active"));
+            return entities[character];
+        });
+    }
 
-    button.classList.add("active");
+    function filterIdeas(category, button) {
+        activeCategory = category;
+
+        document.querySelectorAll(".filters button").forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+        renderIdeas();
+    }
+
+    function searchIdeas() {
+        renderIdeas();
+    }
+
+    function showDetails(id) {
+        const idea = businessIdeas.find(item => item.id === id);
+
+        if (!idea) return;
+
+        alert(
+            "💼 " + idea.title + "\n\n" +
+            idea.desc + "\n\n" +
+            idea.details + "\n\n" +
+            "नोट: लागत और कमाई आपके क्षेत्र और कारोबार के अनुसार अलग-अलग होगी।"
+        );
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle("light");
+
+        const isLight = document.body.classList.contains("light");
+
+        localStorage.setItem(
+            "ideaGeniusTheme",
+            isLight ? "light" : "dark"
+        );
+
+        document.querySelector(".theme-btn").textContent =
+            isLight ? "☀️" : "🌙";
+    }
+
+    function loadTheme() {
+        const savedTheme = localStorage.getItem("ideaGeniusTheme");
+
+        if (savedTheme === "light") {
+            document.body.classList.add("light");
+            document.querySelector(".theme-btn").textContent = "☀️";
+        }
+    }
+
+    document.getElementById("search").addEventListener("input", renderIdeas);
+
+    document.getElementById("search").addEventListener("keydown", event => {
+        if (event.key === "Enter") {
+            searchIdeas();
+        }
+    });
+
+    loadTheme();
     renderIdeas();
-}
-
-function searchIdeas() {
-    renderIdeas();
-}
-
-function showDetails(id) {
-    const idea = businessIdeas.find(item => item.id === id);
-
-    alert(
-        "💼 " + idea.title + "\n\n" +
-        idea.desc + "\n\n" +
-        idea.details + "\n\n" +
-        "नोट: लागत और कमाई आपके क्षेत्र और कारोबार के अनुसार अलग-अलग होगी।"
-    );
-}
-
-document.getElementById("search").addEventListener("keydown", event => {
-    if (event.key === "Enter") searchIdeas();
-});
-
-renderIdeas();
 </script>
 
 </body>
