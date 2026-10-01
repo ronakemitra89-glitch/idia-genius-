@@ -1,29 +1,22 @@
+```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="google-site-verification" content="bkhbzOfz-HjmcI9vETfD2Amz-OSTDt23O4ZKpiNETrU">
+
   <title>IDEA GENIUS | नए बिजनेस, YouTube और वेबसाइट आइडिया</title>
 
-  <!-- Google Search Console Verification -->
-  <meta name="google-site-verification"
-        content="bkhbzOfz-HjmcI9vETfD2Amz-OSTDt23O4ZKpiNETrU">
-
-  <!-- SEO Meta Tags -->
-  <meta name="description"
-        content="IDEA GENIUS पर नए बिजनेस, YouTube वीडियो और वेबसाइट बनाने के आइडिया खोजें। अपने अगले प्रोजेक्ट के लिए प्रेरणा पाएं।">
-
-  <meta name="keywords"
-        content="business ideas, YouTube ideas, website ideas, online business, IDEA GENIUS">
-
+  <meta name="description" content="IDEA GENIUS पर नए Business, YouTube, Website और AI Ideas खोजें। अपने अगले प्रोजेक्ट के लिए बेहतरीन आइडिया पाएं।">
+  <meta name="keywords" content="business ideas, youtube ideas, website ideas, AI ideas, new ideas, online business">
   <meta name="author" content="Ronak">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#080d25">
 
   <meta property="og:title" content="IDEA GENIUS">
-  <meta property="og:description"
-        content="Discover new business, YouTube and website ideas.">
+  <meta property="og:description" content="नए Business, YouTube, Website और AI Ideas खोजें।">
   <meta property="og:type" content="website">
 
   <style>
@@ -40,17 +33,17 @@
       --muted: #b9c5e0;
       --border: #25365f;
       --primary: #713cff;
-      --secondary: #00d4ff;
-      --shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+      --primary2: #00c6ff;
+      --success: #18d67a;
+      --danger: #ff5c7a;
     }
 
     body.light {
       --bg: #f2f5ff;
       --card: #ffffff;
-      --text: #151b35;
-      --muted: #59627c;
-      --border: #dce3f5;
-      --shadow: 0 12px 35px rgba(40, 55, 100, 0.1);
+      --text: #10152b;
+      --muted: #59627a;
+      --border: #d8def0;
     }
 
     html {
@@ -75,23 +68,25 @@
       font: inherit;
     }
 
-    .container {
-      width: min(1150px, 92%);
-      margin: auto;
-    }
-
     /* HEADER */
 
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: var(--bg);
+      z-index: 1000;
+      background: rgba(8, 13, 37, 0.94);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
-    .navbar {
-      min-height: 72px;
+    body.light header {
+      background: rgba(242, 245, 255, 0.94);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -99,246 +94,258 @@
     }
 
     .logo {
-      font-size: 25px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      color: var(--text);
+      font-size: 22px;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .logo span {
-      color: var(--secondary);
+      color: #8c63ff;
     }
 
-    nav {
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 8px;
       flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    nav a {
+    .nav-links a {
+      padding: 8px 11px;
+      border-radius: 9px;
       color: var(--muted);
       font-size: 14px;
-      font-weight: bold;
+      transition: 0.2s;
     }
 
-    nav a:hover {
-      color: var(--secondary);
+    .nav-links a:hover {
+      color: white;
+      background: var(--primary);
+    }
+
+    body.light .nav-links a:hover {
+      color: white;
     }
 
     .theme-btn {
+      border: 1px solid var(--border);
       background: var(--card);
       color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 9px 13px;
+      padding: 8px 11px;
+      border-radius: 9px;
       cursor: pointer;
     }
 
     /* HERO */
 
     .hero {
-      padding: 90px 0 75px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px 55px;
       text-align: center;
-      background:
-        radial-gradient(circle at 50% 0%,
-        rgba(113, 60, 255, 0.25), transparent 55%);
     }
 
-    .badge {
+    .hero-badge {
       display: inline-block;
-      padding: 7px 16px;
+      padding: 8px 14px;
       border: 1px solid var(--border);
       background: var(--card);
       border-radius: 30px;
-      color: var(--secondary);
-      font-size: 13px;
-      margin-bottom: 22px;
+      color: #a88cff;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(38px, 7vw, 70px);
-      line-height: 1.15;
-      margin-bottom: 22px;
-      font-weight: 900;
-    }
-
-    .gradient {
-      background: linear-gradient(90deg, #713cff, #00d4ff);
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #8b5cff, #00c6ff);
       -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero p {
+      max-width: 760px;
+      margin: auto;
       color: var(--muted);
-      max-width: 700px;
-      margin: 0 auto 30px;
-      font-size: 17px;
+      font-size: 18px;
     }
 
-    .primary-btn {
-      display: inline-block;
-      background: linear-gradient(90deg, #713cff, #4c7dff);
-      color: white;
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
       border: none;
-      padding: 13px 25px;
+      padding: 13px 20px;
       border-radius: 10px;
-      font-weight: bold;
       cursor: pointer;
+      font-weight: bold;
       transition: 0.2s;
     }
 
-    .primary-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(113, 60, 255, 0.3);
+    .btn-primary {
+      color: white;
+      background: linear-gradient(90deg, #713cff, #00a9ff);
     }
 
-    /* GENERAL SECTIONS */
+    .btn-secondary {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
 
-    section {
-      padding: 65px 0;
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* COMMON */
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 55px 20px;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .section-title h2 {
-      font-size: clamp(27px, 4vw, 38px);
-      margin-bottom: 10px;
+      font-size: 34px;
+      margin-bottom: 8px;
     }
 
     .section-title p {
       color: var(--muted);
     }
 
-    /* CATEGORY CARDS */
+    /* CATEGORIES */
 
-    .categories {
+    .category-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 20px;
     }
 
     .category-card {
       background: var(--card);
       border: 1px solid var(--border);
-      padding: 30px 22px;
       border-radius: 18px;
-      text-align: center;
-      cursor: pointer;
+      padding: 28px;
       transition: 0.25s;
     }
 
     .category-card:hover {
       transform: translateY(-6px);
-      border-color: var(--primary);
-      box-shadow: var(--shadow);
+      border-color: #713cff;
     }
 
     .category-icon {
-      font-size: 43px;
+      font-size: 42px;
       margin-bottom: 12px;
     }
 
     .category-card h3 {
-      font-size: 21px;
       margin-bottom: 8px;
     }
 
     .category-card p {
       color: var(--muted);
-      font-size: 14px;
+      margin-bottom: 18px;
     }
 
     /* SEARCH */
 
-    .search-area {
-      max-width: 700px;
-      margin: 0 auto 25px;
+    .search-box {
+      max-width: 800px;
+      margin: 0 auto 22px;
       display: flex;
       gap: 10px;
     }
 
-    .search-area input {
+    .search-box input {
       flex: 1;
-      min-width: 0;
-      padding: 14px 17px;
-      border-radius: 10px;
-      background: var(--card);
+      padding: 15px 17px;
+      border-radius: 12px;
       border: 1px solid var(--border);
+      background: var(--card);
       color: var(--text);
       outline: none;
     }
 
-    .search-area input:focus {
-      border-color: var(--primary);
+    .search-box input:focus {
+      border-color: #713cff;
     }
 
-    .filters {
+    .filter-buttons {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
       margin-bottom: 30px;
     }
 
     .filter-btn {
-      padding: 9px 17px;
-      border-radius: 25px;
+      padding: 9px 14px;
+      border-radius: 20px;
       border: 1px solid var(--border);
       background: var(--card);
-      color: var(--text);
+      color: var(--muted);
       cursor: pointer;
     }
 
     .filter-btn.active,
     .filter-btn:hover {
       background: var(--primary);
-      border-color: var(--primary);
       color: white;
+      border-color: var(--primary);
     }
 
-    /* IDEA CARDS */
+    /* IDEAS */
 
     .ideas-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 18px;
     }
 
     .idea-card {
+      display: flex;
+      flex-direction: column;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 23px;
-      display: flex;
-      flex-direction: column;
+      padding: 22px;
       min-height: 220px;
-      transition: 0.2s;
+      transition: 0.25s;
     }
 
     .idea-card:hover {
       transform: translateY(-4px);
-      box-shadow: var(--shadow);
+      border-color: #713cff;
     }
 
     .idea-tag {
       display: inline-block;
       align-self: flex-start;
-      background: rgba(113, 60, 255, 0.15);
-      color: #a98cff;
+      padding: 5px 9px;
       border-radius: 20px;
-      padding: 4px 11px;
+      background: rgba(113, 60, 255, 0.15);
+      color: #a88cff;
       font-size: 12px;
       margin-bottom: 12px;
     }
 
     .idea-card h3 {
-      font-size: 19px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .idea-card p {
@@ -347,9 +354,9 @@
       flex: 1;
     }
 
-    .card-actions {
+    .idea-actions {
       display: flex;
-      gap: 9px;
+      gap: 8px;
       margin-top: 18px;
     }
 
@@ -357,181 +364,121 @@
       border: 1px solid var(--border);
       background: transparent;
       color: var(--text);
+      padding: 8px 10px;
       border-radius: 8px;
-      padding: 7px 11px;
       cursor: pointer;
       font-size: 13px;
     }
 
     .small-btn:hover {
-      border-color: var(--primary);
+      background: var(--primary);
+      color: white;
     }
 
-    .empty {
+    .empty-message {
       display: none;
       text-align: center;
-      color: var(--muted);
       padding: 30px;
-    }
-
-    /* GENERATOR */
-
-    .generator-box {
-      max-width: 750px;
-      margin: auto;
-      padding: 35px 25px;
-      text-align: center;
+      color: var(--muted);
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
+      border-radius: 14px;
     }
 
-    .generator-box h2 {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
+    /* RANDOM */
 
-    .generator-box p {
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-
-    .generated-idea {
-      display: none;
-      background: var(--bg);
+    .random-box {
+      background: linear-gradient(135deg, rgba(113, 60, 255, 0.18), rgba(0, 198, 255, 0.12));
       border: 1px solid var(--border);
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 12px;
-      text-align: left;
+      border-radius: 20px;
+      padding: 40px 25px;
+      text-align: center;
     }
 
-    .generated-idea h3 {
-      margin-bottom: 8px;
-    }
-
-    .generated-idea p {
-      margin: 0;
+    #randomIdea {
+      font-size: 25px;
+      font-weight: bold;
+      margin: 22px auto;
+      max-width: 800px;
     }
 
     /* ABOUT */
 
     .about-box {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 30px;
+      text-align: center;
     }
 
-    .about-box h3 {
-      font-size: 22px;
-      margin: 20px 0 8px;
-    }
-
-    .about-box h3:first-child {
-      margin-top: 0;
-    }
-
-    .about-box p,
-    .about-box li {
+    .about-box p {
       color: var(--muted);
-    }
-
-    .about-box ul {
-      padding-left: 22px;
-      margin-top: 10px;
+      margin-bottom: 12px;
     }
 
     /* FOOTER */
 
     footer {
       border-top: 1px solid var(--border);
-      padding: 35px 0;
-      background: var(--card);
+      margin-top: 50px;
+      padding: 35px 20px;
       text-align: center;
-    }
-
-    .footer-logo {
-      font-size: 24px;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .footer-logo span {
-      color: var(--secondary);
-    }
-
-    footer p {
       color: var(--muted);
-      font-size: 14px;
-      margin: 7px 0;
     }
 
     .footer-links {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 18px;
-      margin: 18px 0;
-    }
-
-    .footer-links a {
-      color: var(--muted);
-      font-size: 14px;
+      gap: 16px;
+      margin: 15px 0;
     }
 
     .footer-links a:hover {
-      color: var(--secondary);
+      color: #8c63ff;
     }
 
-    @media (max-width: 850px) {
-      .categories,
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .category-grid,
       .ideas-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .navbar {
-        padding: 12px 0;
-        flex-wrap: wrap;
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
-      nav {
-        gap: 14px;
+      .nav-links {
+        justify-content: flex-start;
       }
     }
 
     @media (max-width: 600px) {
-      .categories,
+      .hero {
+        padding-top: 55px;
+      }
+
+      .category-grid,
       .ideas-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding: 65px 0 55px;
-      }
-
-      nav {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .navbar {
-        justify-content: center;
-      }
-
-      .search-area {
+      .search-box {
         flex-direction: column;
       }
 
-      .search-area button {
+      .search-box .btn {
         width: 100%;
       }
 
-      section {
-        padding: 48px 0;
+      .hero h1 {
+        font-size: 45px;
       }
     }
   </style>
@@ -541,582 +488,1106 @@
 
   <!-- HEADER -->
   <header>
-    <div class="container navbar">
-      <a href="index.html" class="logo">IDEA <span>GENIUS</span></a>
+    <nav class="nav">
 
-      <nav>
+      <a href="index.html" class="logo">
+        💡 <span>IDEA</span> GENIUS
+      </a>
+
+      <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="business.html">Business</a>
         <a href="youtube.html">YouTube</a>
-        <a href="about.html">About</a>
+        <a href="website.html">Website</a>
         <a href="ai.html">AI Ideas</a>
-      </nav>
+        <a href="saved.html">Saved</a>
+        <a href="trending.html">Trending</a>
+        <a href="learning.html">Learning</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
 
-      <button class="theme-btn" id="themeBtn" aria-label="Change theme">
-        🌙 Theme
-      </button>
-    </div>
+        <button class="theme-btn" id="themeBtn">🌙</button>
+      </div>
+
+    </nav>
   </header>
 
-  <main>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <span class="badge">💡 आपका आइडिया, आपकी नई शुरुआत</span>
+  <!-- HERO -->
+  <section class="hero">
 
-        <h1>
-          Discover Your<br>
-          <span class="gradient">Next Big Idea</span>
-        </h1>
+    <div class="hero-badge">
+      🚀 नए Ideas की दुनिया
+    </div>
 
-        <p>
-          बिजनेस शुरू करना हो, YouTube चैनल बनाना हो या अपनी वेबसाइट
-          तैयार करनी हो — अपने अगले प्रोजेक्ट के लिए नए आइडिया खोजें।
-        </p>
+    <h1>
+      IDEA GENIUS
+    </h1>
 
-        <a href="#ideas" class="primary-btn">Explore Ideas →</a>
+    <p>
+      नए Business, YouTube, Website और AI Ideas खोजें।
+      अपने अगले प्रोजेक्ट के लिए एक शानदार आइडिया आज ही पाएं।
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#explore" class="btn btn-primary">
+        🔎 Ideas Explore करें
+      </a>
+
+      <a href="ai.html" class="btn btn-secondary">
+        🤖 AI Idea Generator
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+  <section class="section">
+
+    <div class="section-title">
+      <h2>💡 Ideas की Categories</h2>
+      <p>अपनी पसंद की category चुनें और नए ideas खोजें।</p>
+    </div>
+
+    <div class="category-grid">
+
+      <div class="category-card">
+        <div class="category-icon">💼</div>
+        <h3>Business Ideas</h3>
+        <p>कम लागत और नए business शुरू करने के ideas।</p>
+        <a href="business.html" class="btn btn-primary">
+          Business Ideas →
+        </a>
       </div>
-    </section>
 
-    <!-- CATEGORIES -->
-    <section id="categories">
-      <div class="container">
-        <div class="section-title">
-          <h2>Explore Categories</h2>
-          <p>अपनी पसंद की कैटेगरी चुनें और नए आइडिया खोजें।</p>
-        </div>
-
-        <div class="categories">
-          <a href="business.html" class="category-card">
-            <div class="category-icon">🚀</div>
-            <h3>Business Ideas</h3>
-            <p>नए बिजनेस और ऑनलाइन कमाई के अवसरों के बारे में जानें।</p>
-          </a>
-
-          <a href="youtube.html" class="category-card">
-            <div class="category-icon">🎬</div>
-            <h3>YouTube Ideas</h3>
-            <p>वीडियो और चैनल के लिए नए विषयों की प्रेरणा पाएं।</p>
-          </a>
-
-          <a href="ai.html" class="category-card">
-            <div class="category-icon">🤖</div>
-            <h3>Website & AI Ideas</h3>
-            <p>वेबसाइट और AI प्रोजेक्ट बनाने के नए आइडिया खोजें।</p>
-          </a>
-        </div>
+      <div class="category-card">
+        <div class="category-icon">▶️</div>
+        <h3>YouTube Ideas</h3>
+        <p>YouTube channel और videos के लिए नए ideas।</p>
+        <a href="youtube.html" class="btn btn-primary">
+          YouTube Ideas →
+        </a>
       </div>
-    </section>
 
-    <!-- IDEAS -->
-    <section id="ideas">
-      <div class="container">
-        <div class="section-title">
-          <h2>Explore New Ideas</h2>
-          <p>नीचे दिए गए आइडिया खोजें और अपनी पसंद के आइडिया सेव करें।</p>
-        </div>
+      <div class="category-card">
+        <div class="category-icon">🌐</div>
+        <h3>Website & AI</h3>
+        <p>Website और AI based projects के लिए ideas।</p>
+        <a href="ai.html" class="btn btn-primary">
+          Explore Ideas →
+        </a>
+      </div>
 
-        <div class="search-area">
-          <input
-            type="search"
-            id="searchInput"
-            placeholder="आइडिया खोजें..."
-            aria-label="Search ideas"
-          >
-          <button class="primary-btn" id="searchBtn">Search</button>
-        </div>
+    </div>
 
-        <div class="filters">
-          <button class="filter-btn active" data-filter="all">All Ideas</button>
-          <button class="filter-btn" data-filter="business">Business</button>
-          <button class="filter-btn" data-filter="youtube">YouTube</button>
-          <button class="filter-btn" data-filter="website">Website</button>
-          <button class="filter-btn" data-filter="saved">Saved ❤️</button>
-        </div>
+  </section>
 
-        <div class="ideas-grid" id="ideasGrid">
 
-          <article class="idea-card" data-category="business">
-            <span class="idea-tag">Business</span>
-            <h3>मोबाइल एक्सेसरीज़ स्टोर</h3>
-            <p>
-              मोबाइल कवर, चार्जर और अन्य एक्सेसरीज़ बेचने का बिजनेस।
-              शुरुआत से पहले अपने इलाके में मांग और लागत की जानकारी लें।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+  <!-- EXPLORE -->
+  <section class="section" id="explore">
 
-          <article class="idea-card" data-category="business">
-            <span class="idea-tag">Business</span>
-            <h3>होममेड फूड बिजनेस</h3>
-            <p>
-              घर पर बने स्नैक्स या खाने की चीज़ें ग्राहकों तक पहुँचाने
-              का विचार। स्थानीय नियम और खाद्य लाइसेंस की जरूरत जाँचें।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+    <div class="section-title">
+      <h2>🔎 Explore Ideas</h2>
+      <p>किसी भी idea का नाम, category या keyword search करें।</p>
+    </div>
 
-          <article class="idea-card" data-category="business">
-            <span class="idea-tag">Business</span>
-            <h3>ऑनलाइन गिफ्ट शॉप</h3>
-            <p>
-              जन्मदिन और खास मौकों के लिए गिफ्ट आइटम की ऑनलाइन दुकान
-              बनाने का विचार।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+    <div class="search-box">
 
-          <article class="idea-card" data-category="business">
-            <span class="idea-tag">Business</span>
-            <h3>कस्टम टी-शर्ट प्रिंटिंग</h3>
-            <p>
-              ग्राहकों की पसंद के अनुसार टी-शर्ट पर नाम, डिजाइन या
-              संदेश प्रिंट करने की सेवा।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="जैसे: business, youtube, mobile, food, website..."
+        autocomplete="off"
+      >
 
-          <article class="idea-card" data-category="business">
-            <span class="idea-tag">Business</span>
-            <h3>लोकल डिलीवरी सेवा</h3>
-            <p>
-              अपने शहर या इलाके में दुकानों के सामान की डिलीवरी
-              के लिए एक छोटी सेवा शुरू करने का विचार।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+      <button class="btn btn-primary" id="searchBtn">
+        🔍 Search
+      </button>
 
-          <article class="idea-card" data-category="youtube">
-            <span class="idea-tag">YouTube</span>
-            <h3>Computer Basics चैनल</h3>
-            <p>
-              कंप्यूटर कीबोर्ड, फाइल मैनेजमेंट और जरूरी शॉर्टकट
-              आसान भाषा में सिखाने वाले वीडियो बनाएं।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+    </div>
 
-          <article class="idea-card" data-category="youtube">
-            <span class="idea-tag">YouTube</span>
-            <h3>Tech Tips वीडियो</h3>
-            <p>
-              मोबाइल और कंप्यूटर की उपयोगी सेटिंग्स तथा सामान्य
-              समस्याओं के समाधान पर वीडियो बनाएं।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
 
-          <article class="idea-card" data-category="youtube">
-            <span class="idea-tag">YouTube</span>
-            <h3>Educational Shorts</h3>
-            <p>
-              सामान्य ज्ञान, विज्ञान और रोचक तथ्यों पर छोटे,
-              स्पष्ट और जानकारीपूर्ण वीडियो बनाएं।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+    <div class="filter-buttons">
 
-          <article class="idea-card" data-category="youtube">
-            <span class="idea-tag">YouTube</span>
-            <h3>Website Tutorials</h3>
-            <p>
-              HTML और CSS से वेबसाइट बनाने की शुरुआती प्रक्रिया
-              स्क्रीन रिकॉर्डिंग के जरिए समझाएं।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+      <button class="filter-btn active" data-filter="all">
+```
+```html
+      <button class="filter-btn active" data-filter="all">
+        All
+      </button>
 
-          <article class="idea-card" data-category="youtube">
-            <span class="idea-tag">YouTube</span>
-            <h3>Local Information चैनल</h3>
-            <p>
-              अपने क्षेत्र की उपयोगी जानकारी, स्थानीय जगहों और
-              सार्वजनिक सेवाओं पर जानकारीपूर्ण वीडियो बनाएं।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+      <button class="filter-btn" data-filter="business">
+        💼 Business
+      </button>
 
-          <article class="idea-card" data-category="website">
-            <span class="idea-tag">Website</span>
-            <h3>Personal Portfolio</h3>
-            <p>
-              अपनी स्किल, प्रोजेक्ट और काम दिखाने के लिए
-              एक व्यक्तिगत पोर्टफोलियो वेबसाइट बनाएं।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+      <button class="filter-btn" data-filter="youtube">
+        ▶️ YouTube
+      </button>
 
-          <article class="idea-card" data-category="website">
-            <span class="idea-tag">Website</span>
-            <h3>Study Notes Website</h3>
-            <p>
-              विद्यार्थियों के लिए विषय के अनुसार नोट्स और
-              अध्ययन सामग्री व्यवस्थित करने वाली वेबसाइट।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+      <button class="filter-btn" data-filter="website">
+        🌐 Website
+      </button>
 
-          <article class="idea-card" data-category="website">
-            <span class="idea-tag">Website</span>
-            <h3>Local Business Directory</h3>
-            <p>
-              स्थानीय दुकानों और सेवाओं की जानकारी एक जगह
-              उपलब्ध कराने वाली वेबसाइट।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+      <button class="filter-btn" data-filter="saved">
+        ❤️ Saved
+      </button>
 
-          <article class="idea-card" data-category="website">
-            <span class="idea-tag">Website</span>
-            <h3>Recipe Website</h3>
-            <p>
-              अलग-अलग व्यंजनों की सामग्री, बनाने के तरीके
-              और उपयोगी कुकिंग टिप्स वाली वेबसाइट।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
+    </div>
 
-          <article class="idea-card" data-category="website">
-            <span class="idea-tag">Website</span>
-            <h3>Online Learning Website</h3>
-            <p>
-              शुरुआती लोगों के लिए कंप्यूटर या किसी अन्य
-              विषय के पाठ और अभ्यास उपलब्ध कराने वाली वेबसाइट।
-            </p>
-            <div class="card-actions">
-              <button class="small-btn save-btn">♡ Save</button>
-              <button class="small-btn share-btn">↗ Share</button>
-            </div>
-          </article>
 
-        </div>
+    <div class="ideas-grid" id="ideasGrid">
 
-        <div class="empty" id="emptyMessage">
-          कोई आइडिया नहीं मिला। दूसरा शब्द खोजकर देखें।
+      <!-- BUSINESS IDEAS -->
+
+      <div class="idea-card" data-category="business">
+        <span class="idea-tag">Business</span>
+        <h3>Mobile Accessories Shop</h3>
+        <p>Mobile covers, chargers, cables और accessories बेचने का business।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
         </div>
       </div>
-    </section>
 
-    <!-- RANDOM GENERATOR -->
-    <section id="generator">
-      <div class="container">
-        <div class="generator-box">
-          <h2>💡 Random Idea Generator</h2>
-          <p>
-            समझ नहीं आ रहा कि कौन-सा आइडिया चुनें?
-            बटन दबाकर एक रैंडम आइडिया देखें।
-          </p>
-
-          <button class="primary-btn" id="generateBtn">
-            Generate New Idea
-          </button>
-
-          <div class="generated-idea" id="generatedIdea">
-            <h3 id="generatedTitle"></h3>
-            <p id="generatedDescription"></p>
-          </div>
+      <div class="idea-card" data-category="business">
+        <span class="idea-tag">Business</span>
+        <h3>Homemade Food Business</h3>
+        <p>घर का बना खाना online order के जरिए बेचने का business।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
         </div>
       </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="container">
-        <div class="section-title">
-          <h2>About IDEA GENIUS</h2>
-          <p>हमारी वेबसाइट के बारे में जानें।</p>
-        </div>
-
-        <div class="about-box">
-          <h3>IDEA GENIUS क्या है?</h3>
-          <p>
-            IDEA GENIUS एक ऐसी वेबसाइट है जहाँ लोग नए बिजनेस,
-            YouTube वीडियो और वेबसाइट बनाने के आइडिया खोज सकते हैं।
-            हमारा उद्देश्य लोगों को नए प्रोजेक्ट के बारे में सोचने
-            और शुरुआत करने के लिए प्रेरणा देना है।
-          </p>
-
-          <h3>आप यहाँ क्या खोज सकते हैं?</h3>
-          <ul>
-            <li>नए बिजनेस आइडिया</li>
-            <li>YouTube वीडियो और चैनल के विषय</li>
-            <li>वेबसाइट और डिजिटल प्रोजेक्ट के विचार</li>
-            <li>अपने अगले प्रोजेक्ट के लिए प्रेरणा</li>
-          </ul>
-
-          <h3>जरूरी जानकारी</h3>
-          <p>
-            वेबसाइट पर दिए गए आइडिया केवल जानकारी और प्रेरणा के लिए हैं।
-            किसी भी बिजनेस को शुरू करने से पहले अपनी रिसर्च करें,
-            लागत और जोखिम समझें तथा जरूरत पड़ने पर विशेषज्ञ की सलाह लें।
-            किसी भी कमाई या सफलता की गारंटी नहीं दी जाती।
-          </p>
+      <div class="idea-card" data-category="business">
+        <span class="idea-tag">Business</span>
+        <h3>Online Gift Shop</h3>
+        <p>Birthday और special occasions के लिए customized gifts बेचें।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
         </div>
       </div>
-    </section>
 
-  </main>
+      <div class="idea-card" data-category="business">
+        <span class="idea-tag">Business</span>
+        <h3>Custom T-Shirt Printing</h3>
+        <p>नाम, फोटो और designs वाली customized T-shirts बनाकर बेचें।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+      <div class="idea-card" data-category="business">
+        <span class="idea-tag">Business</span>
+        <h3>Local Delivery Service</h3>
+        <p>अपने शहर में documents, food और छोटे सामान की delivery service शुरू करें।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+
+      <!-- YOUTUBE IDEAS -->
+
+      <div class="idea-card" data-category="youtube">
+        <span class="idea-tag">YouTube</span>
+        <h3>Computer Basics Channel</h3>
+        <p>Computer की basic जानकारी Hindi में सिखाने वाला YouTube channel।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+      <div class="idea-card" data-category="youtube">
+        <span class="idea-tag">YouTube</span>
+        <h3>Tech Tips Channel</h3>
+        <p>Mobile, apps, internet और technology से जुड़े useful tips बताएं।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+      <div class="idea-card" data-category="youtube">
+        <span class="idea-tag">YouTube</span>
+        <h3>Educational Shorts</h3>
+        <p>छोटे और useful educational videos बनाकर YouTube Shorts पर डालें।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+      <div class="idea-card" data-category="youtube">
+        <span class="idea-tag">YouTube</span>
+        <h3>Website Tutorials</h3>
+        <p>HTML, CSS और website बनाने के आसान tutorials बनाएं।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+      <div class="idea-card" data-category="youtube">
+        <span class="idea-tag">YouTube</span>
+        <h3>Local Information Channel</h3>
+        <p>अपने area की news, जानकारी और useful updates लोगों तक पहुंचाएं।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+
+      <!-- WEBSITE IDEAS -->
+
+      <div class="idea-card" data-category="website">
+        <span class="idea-tag">Website</span>
+        <h3>Personal Portfolio Website</h3>
+        <p>अपने काम, skills और projects दिखाने के लिए personal website बनाएं।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+      <div class="idea-card" data-category="website">
+        <span class="idea-tag">Website</span>
+        <h3>Study Notes Website</h3>
+        <p>Students के लिए notes, questions और study material वाली website बनाएं।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+      <div class="idea-card" data-category="website">
+        <span class="idea-tag">Website</span>
+        <h3>Local Business Directory</h3>
+        <p>अपने शहर की shops और local businesses की जानकारी वाली website बनाएं।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+      <div class="idea-card" data-category="website">
+        <span class="idea-tag">Website</span>
+        <h3>Recipe Website</h3>
+        <p>अलग-अलग recipes, ingredients और cooking instructions वाली website बनाएं।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+      <div class="idea-card" data-category="website">
+        <span class="idea-tag">Website</span>
+        <h3>Online Learning Website</h3>
+        <p>Courses, tutorials और learning resources के लिए online platform बनाएं।</p>
+        <div class="idea-actions">
+          <button class="small-btn save-btn">❤️ Save</button>
+          <button class="small-btn share-btn">📤 Share</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="empty-message" id="emptyMessage">
+      😕 कोई idea नहीं मिला। दूसरा keyword search करके देखें।
+    </div>
+
+  </section>
+
+
+  <!-- RANDOM IDEA -->
+
+  <section class="section">
+
+    <div class="section-title">
+      <h2>🎲 Random Idea Generator</h2>
+      <p>अगर समझ नहीं आ रहा कि क्या शुरू करें, तो random idea पाएं।</p>
+    </div>
+
+    <div class="random-box">
+
+      <div id="randomIdea">
+        💡 Generate Idea पर क्लिक करें
+      </div>
+
+      <button class="btn btn-primary" id="randomBtn">
+        🎲 Generate Idea
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="section">
+
+    <div class="section-title">
+      <h2>🚀 IDEA GENIUS क्या है?</h2>
+    </div>
+
+    <div class="about-box">
+
+      <p>
+        IDEA GENIUS एक ऐसा platform है जहाँ आपको
+        Business, YouTube, Website और AI से जुड़े नए ideas मिल सकते हैं।
+      </p>
+
+      <p>
+        हमारा उद्देश्य लोगों को नए ideas खोजने और उन्हें
+        अपने projects में बदलने में मदद करना है।
+      </p>
+
+      <a href="about.html" class="btn btn-primary">
+        हमारे बारे में →
+      </a>
+
+    </div>
+
+  </section>
+
 
   <!-- FOOTER -->
+
   <footer>
-    <div class="container">
-      <div class="footer-logo">IDEA <span>GENIUS</span></div>
 
-      <p>Big Ideas • Better Future</p>
-
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="business.html">Business Ideas</a>
-        <a href="youtube.html">YouTube Ideas</a>
-      </div>
-
-      <p>Made with ❤️ by Ronak</p>
-      <p>© <span id="year"></span> IDEA GENIUS. All rights reserved.</p>
+    <div class="logo">
+      💡 <span>IDEA</span> GENIUS
     </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="business.html">Business Ideas</a>
+      <a href="youtube.html">YouTube Ideas</a>
+      <a href="website.html">Website Ideas</a>
+      <a href="ai.html">AI Ideas</a>
+      <a href="saved.html">Saved</a>
+      <a href="trending.html">Trending</a>
+      <a href="learning.html">Learning</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <p>
+      © <span id="year"></span> IDEA GENIUS • Big Ideas • Better Future 🚀
+    </p>
+
+    <p>
+      Made with ❤️ by Ronak
+    </p>
+
   </footer>
 
+
   <script>
-    // THEME SWITCH
+
+    /* THEME */
+
     const themeBtn = document.getElementById("themeBtn");
 
     if (localStorage.getItem("ideaTheme") === "light") {
       document.body.classList.add("light");
-      themeBtn.textContent = "☀️ Theme";
+      themeBtn.textContent = "☀️";
     }
 
     themeBtn.addEventListener("click", function () {
+
       document.body.classList.toggle("light");
 
-      const isLight = document.body.classList.contains("light");
+      if (document.body.classList.contains("light")) {
+        localStorage.setItem("ideaTheme", "light");
+        themeBtn.textContent = "☀️";
+      } else {
+        localStorage.setItem("ideaTheme", "dark");
+        themeBtn.textContent = "🌙";
+      }
 
-      localStorage.setItem("ideaTheme", isLight ? "light" : "dark");
-      themeBtn.textContent = isLight ? "☀️ Theme" : "🌙 Theme";
     });
 
-    // CURRENT YEAR
+
+    /* YEAR */
+
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    // SEARCH AND FILTER
-    const searchInput = document.getElementById("searchInput");
-    const searchBtn = document.getElementById("searchBtn");
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const ideaCards = document.querySelectorAll(".idea-card");
-    const emptyMessage = document.getElementById("emptyMessage");
+
+    /* SEARCH */
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+    const searchBtn =
+      document.getElementById("searchBtn");
+
+    const ideaCards =
+      document.querySelectorAll(".idea-card");
+
+    const filterButtons =
+      document.querySelectorAll(".filter-btn");
+
+    const emptyMessage =
+      document.getElementById("emptyMessage");
 
     let currentFilter = "all";
 
+
     function getSavedIdeas() {
+
       try {
-        return JSON.parse(localStorage.getItem("savedIdeas") || "[]");
+
+        return JSON.parse(
+          localStorage.getItem("savedIdeas") || "[]"
+        );
+
       } catch (error) {
+
         return [];
+
       }
+
     }
 
-    function filterIdeas() {
-      const searchText = searchInput.value.trim().toLowerCase();
-      const savedIdeas = getSavedIdeas();
-      let visibleCount = 0;
 
-      ideaCards.forEach(function (card) {
-        const category = card.dataset.category;
-        const title = card.querySelector("h3").textContent.toLowerCase();
-        const description = card.querySelector("p").textContent.toLowerCase();
-        const cardText = title + " " + description;
+    function searchIdeas() {
 
-        const matchesSearch = cardText.includes(searchText);
+      const searchText =
+        searchInput.value
+          .trim()
+          .toLowerCase();
 
-        const matchesCategory =
-          currentFilter === "all" ||
-          category === currentFilter ||
-          (currentFilter === "saved" && savedIdeas.includes(title));
+      const savedIdeas =
+        getSavedIdeas();
 
-        const visible = matchesSearch && matchesCategory;
+      let count = 0;
 
-        card.style.display = visible ? "flex" : "none";
 
-        if (visible) {
-          visibleCount++;
-        }
-      });
+      ideaCards.forEach(function(card) {
 
-      emptyMessage.style.display = visibleCount === 0 ? "block" : "none";
-    }
+        const category =
+          (card.dataset.category || "")
+          .toLowerCase();
 
-    searchBtn.addEventListener("click", filterIdeas);
+        const tag =
+          card.querySelector(".idea-tag")
+          ?.textContent
+          .toLowerCase() || "";
 
-    searchInput.addEventListener("input", filterIdeas);
+        const title =
+          card.querySelector("h3")
+          ?.textContent
+          .toLowerCase() || "";
 
-    filterButtons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        filterButtons.forEach(function (item) {
-          item.classList.remove("active");
-        });
+        const description =
+          card.querySelector("p")
+          ?.textContent
+          .toLowerCase() || "";
 
-        button.classList.add("active");
-        currentFilter = button.dataset.filter;
-        filterIdeas();
-      });
-    });
 
-    // SAVE IDEAS
-    function updateSaveButtons() {
-      const savedIdeas = getSavedIdeas();
+        const fullText =
+          category + " " +
+          tag + " " +
+          title + " " +
+          description;
 
-      ideaCards.forEach(function (card) {
-        const title = card.querySelector("h3").textContent.toLowerCase();
-        const saveButton = card.querySelector(".save-btn");
 
-        if (savedIdeas.includes(title)) {
-          saveButton.textContent = "♥ Saved";
-        } else {
-          saveButton.textContent = "♡ Save";
-        }
-      });
-    }
+        const searchMatch =
+          searchText === "" ||
+          fullText.includes(searchText);
 
-    document.querySelectorAll(".save-btn").forEach(function (button) {
-      button.addEventListener("click", function () {
-        const card = button.closest(".idea-card");
-        const title = card.querySelector("h3").textContent.toLowerCase();
-        let savedIdeas = getSavedIdeas();
 
-        if (savedIdeas.includes(title)) {
-          savedIdeas = savedIdeas.filter(function (item) {
-            return item !== title;
-          });
-        } else {
-          savedIdeas.push(title);
-        }
+        let categoryMatch = true;
 
-        localStorage.setItem("savedIdeas", JSON.stringify(savedIdeas));
-        updateSaveButtons();
-        filterIdeas();
-      });
-    });
 
-    updateSaveButtons();
+        if (currentFilter !== "all") {
 
-    // SHARE IDEAS
-    document.querySelectorAll(".share-btn").forEach(function (button) {
-      button.addEventListener("click", async function () {
-        const card = button.closest(".idea-card");
-        const title = card.querySelector("h3").textContent;
-        const description = card.querySelector("p").textContent;
+          if (currentFilter === "saved") {
 
-        const shareData = {
-          title: title,
-          text: title + "\n" + description,
-          url: window.location.href
-        };
+            categoryMatch =
+              savedIdeas.includes(title);
 
-        try {
-          if (navigator.share) {
-            await navigator.share(shareData);
-          } else if (navigator.clipboard) {
-            await navigator.clipboard.writeText(
-              shareData.text + "\n" + shareData.url
-            );
-            alert("आइडिया कॉपी हो गया!");
           } else {
-            alert("इस ब्राउज़र में शेयर सुविधा उपलब्ध नहीं है।");
+
+            categoryMatch =
+              category === currentFilter;
+
           }
-        } catch (error) {
-          // User cancelled sharing; no action needed.
+
         }
+
+
+        if (searchMatch && categoryMatch) {
+
+          card.style.display = "flex";
+          count++;
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
       });
+
+
+      if (count === 0) {
+
+        emptyMessage.style.display = "block";
+
+      } else {
+
+        emptyMessage.style.display = "none";
+
+      }
+
+    }
+
+
+    /* SEARCH BUTTON */
+
+    searchBtn.addEventListener(
+      "click",
+      searchIdeas
+    );
+
+
+    /* LIVE SEARCH */
+
+    searchInput.addEventListener(
+      "input",
+      searchIdeas
+    );
+
+
+    /* ENTER KEY SEARCH */
+
+    searchInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          searchIdeas();
+        }
+
+      }
+    );
+
+
+    /* FILTER BUTTONS */
+
+    filterButtons.forEach(function(button) {
+
+      button.addEventListener(
+        "click",
+        function() {
+
+          filterButtons.forEach(
+            function(btn) {
+              btn.classList.remove("active");
+            }
+          );
+
+          button.classList.add("active");
+
+          currentFilter =
+            button.dataset.filter;
+
+          searchIdeas();
+
+        }
+      );
+
     });
 
-    // RANDOM IDEA GENERATOR
-    const generatorIdeas = [
-      {
-        title: "मोबाइल एक्सेसरीज़ स्टोर",
-        description: "मोबाइल कवर और चार्जर जैसी चीज़ों की दुकान शुरू करने के बारे में रिसर्च करें।"
-      },
-      {
-        title: "Computer Basics YouTube Channel",
-        description: "कंप्यूटर की शुरुआती जानकारी आसान भाषा में वीडियो के जरिए सिखाएं।"
-      },
-      {
-        title: "Study Notes Website",
-        description: "विद्यार्थियों के लिए विषय के अनुसार नोट्स रखने वाली वेबसाइट बनाएं।"
-      },
-      {
-        title: "होममेड फूड बिजनेस",
-        description: "घर पर बनने वाले खाने के उत्पादों की मांग और लागत का अध्ययन करें।"
-      },
-      {
-        title: "Tech Tips YouTube Channel",
-        description: "मोबाइल और कंप्यूटर की उपयोगी सेटिंग्स पर जानकारीपूर्ण वीडियो बनाएं।"
-      },
-      {
-        title: "Local Business Directory",
-        description: "अपने क्षेत्र की दुकानों और सेवाओं की जानकारी देने वाली वेबसाइट बनाएं।"
-      },
-      {
-        title: "Online Learning Website",
-        description: "शुरुआती लोगों के लिए ऑनलाइन सीखने की सामग्री वाली वेबसाइट बनाएं।"
-      }
+
+    /* SAVE */
+
+    document.querySelectorAll(".save-btn")
+      .forEach(function(button) {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            const card =
+              button.closest(".idea-card");
+
+            const title =
+              card.querySelector("h3")
+              .textContent;
+
+            let savedIdeas =
+              getSavedIdeas();
+
+
+            if (savedIdeas.includes(title)) {
+
+              savedIdeas =
+                savedIdeas.filter(
+                  function(item) {
+                    return item !== title;
+                  }
+                );
+
+              button.textContent =
+                "❤️ Save";
+
+            } else {
+
+              savedIdeas.push(title);
+
+              button.textContent =
+                "💾 Saved";
+
+            }
+
+
+            localStorage.setItem(
+              "savedIdeas",
+              JSON.stringify(savedIdeas)
+            );
+
+          }
+        );
+
+      });
+
+
+    /* SHARE */
+
+    document.querySelectorAll(".share-btn")
+      .forEach(function(button) {
+
+        button.addEventListener(
+          "click",
+          async function() {
+
+            const card =
+              button.closest(".idea-card");
+
+            const title =
+              card.querySelector("h3")
+              .textContent;
+
+            const description =
+              card.querySelector("p")
+              .textContent;
+
+
+            const text =
+              "💡 " + title +
+              "\n\n" +
+              description +
+              "\n\nIDEA GENIUS";
+
+
+            if (navigator.share) {
+
+              try {
+
+                await navigator.share({
+                  title: title,
+                  text: text
+                });
+
+              } catch (error) {}
+
+            } else {
+
+              try {
+
+                await navigator.clipboard
+                  .writeText(text);
+
+                alert(
+                  "Idea copy हो गया ✅"
+                );
+
+              } catch (error) {
+
+                alert(text);
+
+              }
+
+            }
+
+          }
+        );
+
+      });
+
+
+    /* RANDOM IDEA */
+
+    const randomIdeas = [
+
+      "💼 Local Digital Marketing Service शुरू करें",
+
+      "🎥 Computer Tips का YouTube Channel बनाएं",
+
+      "🌐 Local Business Directory Website बनाएं",
+
+      "🤖 AI Based Idea Generator बनाएं",
+
+      "📚 Students के लिए Online Notes Platform बनाएं",
+
+      "🍔 Homemade Food Delivery Business शुरू करें",
+
+      "🎨 Customized T-Shirt Printing Business शुरू करें"
+
     ];
 
-    document.getElementById("generateBtn").addEventListener("click", function () {
-      const randomIndex = Math.floor(Math.random() * generatorIdeas.length);
-      const idea = generatorIdeas[randomIndex];
 
-      document.getElementById("generatedTitle").textContent = idea.title;
-      document.getElementById("generatedDescription").textContent =
-        idea.description;
+    const randomIdea =
+      document.getElementById("randomIdea");
 
-      document.getElementById("generatedIdea").style.display = "block";
-    });
+    const randomBtn =
+      document.getElementById("randomBtn");
+
+
+    randomBtn.addEventListener(
+      "click",
+      function() {
+
+        const index =
+          Math.floor(
+            Math.random() *
+            randomIdeas.length
+          );
+
+        randomIdea.textContent =
+          randomIdeas[index];
+
+      }
+    );
+
+
+    /* START */
+
+    searchIdeas();
+
   </script>
 
 </body>
 </html>
+```
+```html
+<!-- EXTRA BUSINESS IDEAS -->
+
+<div class="idea-card" data-category="business">
+  <span class="idea-tag">Business</span>
+  <h3>Printing & Photocopy Shop</h3>
+  <p>Printing, photocopy, scanning और online form services की दुकान शुरू करें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="business">
+  <span class="idea-tag">Business</span>
+  <h3>Digital Marketing Service</h3>
+  <p>Local दुकानों और businesses के लिए social media और online promotion करें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="business">
+  <span class="idea-tag">Business</span>
+  <h3>Computer Repair Service</h3>
+  <p>Computer, laptop और software की repair तथा installation service दें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="business">
+  <span class="idea-tag">Business</span>
+  <h3>Clothing Reselling Business</h3>
+  <p>Wholesale से कपड़े खरीदकर WhatsApp और social media पर बेचें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="business">
+  <span class="idea-tag">Business</span>
+  <h3>Tea & Snacks Stall</h3>
+  <p>चाय, नाश्ता और fast food की छोटी दुकान शुरू करें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="business">
+  <span class="idea-tag">Business</span>
+  <h3>Bike Washing Service</h3>
+  <p>Bike और scooter washing तथा cleaning की local service शुरू करें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="business">
+  <span class="idea-tag">Business</span>
+  <h3>Home Cleaning Service</h3>
+  <p>घर, office और दुकान की cleaning के लिए local service शुरू करें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="business">
+  <span class="idea-tag">Business</span>
+  <h3>Photography Service</h3>
+  <p>Wedding, birthday और छोटे events के लिए photography service दें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="business">
+  <span class="idea-tag">Business</span>
+  <h3>Online Form Filling Service</h3>
+  <p>लोगों के लिए online applications और government forms भरने की service दें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="business">
+  <span class="idea-tag">Business</span>
+  <h3>Customized Mug Printing</h3>
+  <p>Photo और name वाले customized mugs बनाकर बेचें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+
+<!-- EXTRA YOUTUBE IDEAS -->
+
+<div class="idea-card" data-category="youtube">
+  <span class="idea-tag">YouTube</span>
+  <h3>Mobile Tips Channel</h3>
+  <p>Android और smartphone की hidden settings और useful tips बताएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="youtube">
+  <span class="idea-tag">YouTube</span>
+  <h3>AI Tools Channel</h3>
+  <p>नए AI tools और उनके उपयोग आसान भाषा में समझाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="youtube">
+  <span class="idea-tag">YouTube</span>
+  <h3>Village Life Channel</h3>
+  <p>गांव की life, खेती, local food और daily activities के videos बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="youtube">
+  <span class="idea-tag">YouTube</span>
+  <h3>Motivational Shorts</h3>
+  <p>Short motivational stories और positive messages के videos बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="youtube">
+  <span class="idea-tag">YouTube</span>
+  <h3>Gaming Channel</h3>
+  <p>Popular games के gameplay, tips और entertaining videos बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="youtube">
+  <span class="idea-tag">YouTube</span>
+  <h3>Cooking Channel</h3>
+  <p>Easy recipes और घर पर बनने वाले खाना बनाने के videos बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="youtube">
+  <span class="idea-tag">YouTube</span>
+  <h3>Travel Vlog Channel</h3>
+  <p>अपने शहर और आसपास की जगहों के travel videos बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="youtube">
+  <span class="idea-tag">YouTube</span>
+  <h3>News Explanation Channel</h3>
+  <p>महत्वपूर्ण news और topics को सरल भाषा में explain करें।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="youtube">
+  <span class="idea-tag">YouTube</span>
+  <h3>History Channel</h3>
+  <p>भारत और दुनिया के इतिहास से जुड़ी interesting जानकारी बताएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="youtube">
+  <span class="idea-tag">YouTube</span>
+  <h3>Job Information Channel</h3>
+  <p>Jobs, exams और career opportunities की जानकारी लोगों तक पहुंचाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+
+<!-- EXTRA WEBSITE IDEAS -->
+
+<div class="idea-card" data-category="website">
+  <span class="idea-tag">Website</span>
+  <h3>Job Search Website</h3>
+  <p>Local और online jobs की जानकारी देने वाली website बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="website">
+  <span class="idea-tag">Website</span>
+  <h3>Local News Website</h3>
+  <p>अपने शहर और आसपास की local news के लिए website बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="website">
+  <span class="idea-tag">Website</span>
+  <h3>Restaurant Menu Website</h3>
+  <p>Restaurant के menu, photos और contact information वाली website बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="website">
+  <span class="idea-tag">Website</span>
+  <h3>Online Calculator Website</h3>
+  <p>Age, EMI, percentage और अन्य useful calculators वाली website बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="website">
+  <span class="idea-tag">Website</span>
+  <h3>Event Booking Website</h3>
+  <p>Local events और activities की जानकारी तथा booking के लिए platform बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="website">
+  <span class="idea-tag">Website</span>
+  <h3>Portfolio Builder</h3>
+  <p>Users को आसानी से अपना online portfolio बनाने वाली website बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="website">
+  <span class="idea-tag">Website</span>
+  <h3>Student Resource Website</h3>
+  <p>Students के लिए notes, PDFs, tools और study resources उपलब्ध कराएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="website">
+  <span class="idea-tag">Website</span>
+  <h3>AI Tools Directory</h3>
+  <p>अलग-अलग AI tools को category के अनुसार एक website पर दिखाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="website">
+  <span class="idea-tag">Website</span>
+  <h3>Online Quiz Website</h3>
+  <p>General knowledge और educational quizzes के लिए interactive website बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+
+<div class="idea-card" data-category="website">
+  <span class="idea-tag">Website</span>
+  <h3>Local Services Website</h3>
+  <p>Electrician, plumber, mechanic और अन्य local services की directory बनाएं।</p>
+  <div class="idea-actions">
+    <button class="small-btn save-btn">❤️ Save</button>
+    <button class="small-btn share-btn">📤 Share</button>
+  </div>
+</div>
+```
