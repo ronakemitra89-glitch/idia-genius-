@@ -1,163 +1,574 @@
+```html id="n8p3kd"
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html><var><!DOCTYPE html>
-
 <html lang="hi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Trending Ideas | IDEA GENIUS</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#0b1020;color:white;min-height:100vh}
-header{background:#141b33;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;border-bottom:1px solid #303957}
-.logo{font-size:25px;font-weight:bold;color:#a78bfa}
-nav{display:flex;gap:15px;flex-wrap:wrap}
-nav a{color:#dbe3ff;text-decoration:none;font-size:14px}
-nav a:hover{color:#a78bfa}
-.container{max-width:1100px;margin:45px auto;padding:20px}
-.hero{text-align:center;margin-bottom:30px}
-.hero h1{font-size:38px;margin-bottom:12px}
-.hero h1 span{color:#a78bfa}
-.hero p{color:#aab4d0;line-height:1.7}
-.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:25px 0}
-.filters button{padding:11px 20px;border-radius:30px;border:1px solid #394566;background:#151d36;color:#dbe3ff;cursor:pointer}
-.filters button.active,.filters button:hover{background:#8b5cf6;color:white;border-color:#8b5cf6}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.card{background:#151d36;border:1px solid #303957;border-radius:16px;padding:22px;transition:.2s}
-.card:hover{transform:translateY(-4px);border-color:#8b5cf6}
-.tag{display:inline-block;padding:6px 10px;border-radius:20px;background:#31245b;color:#c4b5fd;font-size:12px;margin-bottom:14px}
-.card h2{font-size:20px;margin-bottom:12px;color:#fff}
-.card p{color:#b9c4df;line-height:1.65;font-size:14px}
-.badge{color:#fbbf24;font-size:13px;margin:12px 0}
-button{border:0;border-radius:9px;padding:11px 16px;background:#8b5cf6;color:white;font-weight:bold;cursor:pointer}
-button:hover{background:#7444e8}
-.card button{margin-top:15px}
-.empty{grid-column:1/-1;text-align:center;padding:35px;color:#aab4d0}
-footer{text-align:center;padding:25px;color:#8994b5;border-top:1px solid #303957;margin-top:50px}
-@media(max-width:600px){.hero h1{font-size:29px}.container{margin:25px auto}}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#0b1020;
+    color:white;
+    min-height:100vh;
+}
+
+header{
+    background:#141b33;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    border-bottom:1px solid #303957;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#a78bfa;
+}
+
+nav{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#dbe3ff;
+    text-decoration:none;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#a78bfa;
+}
+
+.container{
+    max-width:1100px;
+    margin:45px auto;
+    padding:20px;
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.hero h1 span{
+    color:#a78bfa;
+}
+
+.hero p{
+    color:#aab4d0;
+    line-height:1.7;
+}
+
+.filters{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin:25px 0;
+}
+
+.filters button{
+    padding:11px 20px;
+    border-radius:30px;
+    border:1px solid #394566;
+    background:#151d36;
+    color:#dbe3ff;
+    cursor:pointer;
+}
+
+.filters button.active,
+.filters button:hover{
+    background:#8b5cf6;
+    color:white;
+    border-color:#8b5cf6;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#151d36;
+    border:1px solid #303957;
+    border-radius:16px;
+    padding:22px;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#8b5cf6;
+}
+
+.tag{
+    display:inline-block;
+    padding:6px 10px;
+    border-radius:20px;
+    background:#31245b;
+    color:#c4b5fd;
+    font-size:12px;
+    margin-bottom:14px;
+}
+
+.card h2{
+    font-size:20px;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.card p{
+    color:#b9c4df;
+    line-height:1.65;
+    font-size:14px;
+}
+
+.badge{
+    color:#fbbf24;
+    font-size:13px;
+    margin:12px 0;
+}
+
+button{
+    border:0;
+    border-radius:9px;
+    padding:11px 16px;
+    background:#8b5cf6;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#7444e8;
+}
+
+.card button{
+    margin-top:15px;
+}
+
+.empty{
+    grid-column:1/-1;
+    text-align:center;
+    padding:35px;
+    color:#aab4d0;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#8994b5;
+    border-top:1px solid #303957;
+    margin-top:50px;
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .container{
+        margin:25px auto;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+}
+
 </style>
+
 </head>
+
+
 <body>
 
+
 <header>
-  <div class="logo">💡 IDEA GENIUS</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="business.html">Business</a>
-    <a href="youtube.html">YouTube</a>
-    <a href="website.html">Website</a>
-    <a href="ai.html">AI Generator</a>
-    <a href="saved.html">Saved Ideas</a>
-    <a href="trending.html">Trending</a>
-  </nav>
+
+    <div class="logo">
+        💡 IDEA GENIUS
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="business.html">Business</a>
+
+        <a href="youtube.html">YouTube</a>
+
+        <a href="website.html">Website</a>
+
+        <a href="ai.html">AI Generator</a>
+
+        <a href="saved.html">Saved Ideas</a>
+
+        <a href="trending.html">Trending</a>
+
+        <a href="learning.html">Learning</a>
+
+        <a href="about.html">About Us</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
 </header>
 
+
 <main class="container">
-  <section class="hero">
-    <h1>🔥 <span>Trending Ideas</span></h1>
-    <p>बिजनेस, YouTube और वेबसाइट के लिए कुछ लोकप्रिय विषयों पर आधारित आइडियाज़।<br>अपनी पसंद का आइडिया चुनें और सेव करें।</p>
-  </section>
 
-  <div class="filters">
-    <button class="active" onclick="filterIdeas('all',this)">सभी</button>
-    <button onclick="filterIdeas('Business',this)">Business</button>
-    <button onclick="filterIdeas('YouTube',this)">YouTube</button>
-    <button onclick="filterIdeas('Website',this)">Website</button>
-  </div>
 
-  <section class="grid" id="ideaGrid"></section>
+<section class="hero">
+
+    <h1>
+        🔥 <span>Trending Ideas</span>
+    </h1>
+
+    <p>
+        बिजनेस, YouTube और वेबसाइट के लिए कुछ लोकप्रिय विषयों
+        पर आधारित आइडियाज़।
+        <br>
+        अपनी पसंद का आइडिया चुनें और सेव करें।
+    </p>
+
+</section>
+
+
+<div class="filters">
+
+    <button
+        class="active"
+        onclick="filterIdeas('all',this)"
+    >
+        सभी
+    </button>
+
+    <button
+        onclick="filterIdeas('Business',this)"
+    >
+        Business
+    </button>
+
+    <button
+        onclick="filterIdeas('YouTube',this)"
+    >
+        YouTube
+    </button>
+
+    <button
+        onclick="filterIdeas('Website',this)"
+    >
+        Website
+    </button>
+
+</div>
+
+
+<section
+    class="grid"
+    id="ideaGrid"
+></section>
+
+
 </main>
 
-<footer>© 2026 IDEA GENIUS | Think • Create • Grow</footer>
+
+<footer>
+
+    © 2026 IDEA GENIUS | Think • Create • Grow
+
+</footer>
+
 
 <script>
-const trendingIdeas=[
- {title:"AI से डिजिटल पोस्टर बनाना",category:"Business",desc:"स्थानीय दुकानों और छोटे व्यवसायों के लिए डिजिटल पोस्टर और सोशल मीडिया डिजाइन बनाने की सेवा शुरू करें।",trend:"डिजिटल क्रिएटिव"},
- {title:"ऑनलाइन स्किल सिखाने वाला चैनल",category:"YouTube",desc:"कंप्यूटर, मोबाइल और इंटरनेट की आसान जानकारी छोटे और लंबे वीडियो के जरिए लोगों तक पहुँचाएँ।",trend:"शिक्षा"},
- {title:"लोकल बिजनेस डायरेक्टरी",category:"Website",desc:"अपने शहर की दुकानों, सर्विस और जरूरी संपर्कों की जानकारी एक वेबसाइट पर उपलब्ध कराएँ।",trend:"लोकल जानकारी"},
- {title:"Shorts में टेक टिप्स",category:"YouTube",desc:"मोबाइल और कंप्यूटर की एक-एक उपयोगी ट्रिक पर छोटे वीडियो बनाएँ।",trend:"शॉर्ट वीडियो"},
- {title:"ऑनलाइन गिफ्ट स्टोर",category:"Business",desc:"जन्मदिन और खास मौकों के लिए कस्टम गिफ्ट और फोटो फ्रेम बेचने का ऑनलाइन स्टोर बनाएँ।",trend:"ई-कॉमर्स"},
- {title:"स्टूडेंट नोट्स वेबसाइट",category:"Website",desc:"विद्यार्थियों के लिए विषयवार नोट्स, अभ्यास और पढ़ाई की सामग्री व्यवस्थित करें।",trend:"एजुकेशन"},
- {title:"बिना चेहरा दिखाए कहानी चैनल",category:"YouTube",desc:"अपनी आवाज़, चित्रों और एनिमेशन की मदद से ज्ञानवर्धक या प्रेरक कहानियाँ बनाएँ।",trend:"कहानी"},
- {title:"घर से स्नैक्स बिजनेस",category:"Business",desc:"स्थानीय मांग के अनुसार घर पर बने स्नैक्स के ऑर्डर लेकर छोटे स्तर पर शुरुआत करें।",trend:"फूड"},
- {title:"नौकरी जानकारी वेबसाइट",category:"Website",desc:"सरकारी और निजी नौकरी की जानकारी श्रेणी के अनुसार साझा करें और हर सूचना को आधिकारिक स्रोत से जाँचें।",trend:"करियर"}
+
+
+const trendingIdeas = [
+
+    {
+        title:"AI से डिजिटल पोस्टर बनाना",
+        category:"Business",
+        desc:"स्थानीय दुकानों और छोटे व्यवसायों के लिए डिजिटल पोस्टर और सोशल मीडिया डिजाइन बनाने की सेवा शुरू करें।",
+        trend:"डिजिटल क्रिएटिव"
+    },
+
+    {
+        title:"ऑनलाइन स्किल सिखाने वाला चैनल",
+        category:"YouTube",
+        desc:"कंप्यूटर, मोबाइल और इंटरनेट की आसान जानकारी छोटे और लंबे वीडियो के जरिए लोगों तक पहुँचाएँ।",
+        trend:"शिक्षा"
+    },
+
+    {
+        title:"लोकल बिजनेस डायरेक्टरी",
+        category:"Website",
+        desc:"अपने शहर की दुकानों, सर्विस और जरूरी संपर्कों की जानकारी एक वेबसाइट पर उपलब्ध कराएँ।",
+        trend:"लोकल जानकारी"
+    },
+
+    {
+        title:"Shorts में टेक टिप्स",
+        category:"YouTube",
+        desc:"मोबाइल और कंप्यूटर की एक-एक उपयोगी ट्रिक पर छोटे वीडियो बनाएँ।",
+        trend:"शॉर्ट वीडियो"
+    },
+
+    {
+        title:"ऑनलाइन गिफ्ट स्टोर",
+        category:"Business",
+        desc:"जन्मदिन और खास मौकों के लिए कस्टम गिफ्ट और फोटो फ्रेम बेचने का ऑनलाइन स्टोर बनाएँ।",
+        trend:"ई-कॉमर्स"
+    },
+
+    {
+        title:"स्टूडेंट नोट्स वेबसाइट",
+        category:"Website",
+        desc:"विद्यार्थियों के लिए विषयवार नोट्स, अभ्यास और पढ़ाई की सामग्री व्यवस्थित करें।",
+        trend:"एजुकेशन"
+    },
+
+    {
+        title:"बिना चेहरा दिखाए कहानी चैनल",
+        category:"YouTube",
+        desc:"अपनी आवाज़, चित्रों और एनिमेशन की मदद से ज्ञानवर्धक या प्रेरक कहानियाँ बनाएँ।",
+        trend:"कहानी"
+    },
+
+    {
+        title:"घर से स्नैक्स बिजनेस",
+        category:"Business",
+        desc:"स्थानीय मांग के अनुसार घर पर बने स्नैक्स के ऑर्डर लेकर छोटे स्तर पर शुरुआत करें।",
+        trend:"फूड"
+    },
+
+    {
+        title:"नौकरी जानकारी वेबसाइट",
+        category:"Website",
+        desc:"सरकारी और निजी नौकरी की जानकारी श्रेणी के अनुसार साझा करें और हर सूचना को आधिकारिक स्रोत से जाँचें।",
+        trend:"करियर"
+    }
+
 ];
 
-let selected="all";
+
+let selected = "all";
+
 
 function filterIdeas(category,button){
- selected=category;
- document.querySelectorAll(".filters button").forEach(btn=>btn.classList.remove("active"));
- button.classList.add("active");
- renderIdeas();
+
+    selected = category;
+
+
+    document
+        .querySelectorAll(".filters button")
+        .forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+
+    button.classList.add("active");
+
+
+    renderIdeas();
+
 }
+
 
 function renderIdeas(){
- const grid=document.getElementById("ideaGrid");
- grid.innerHTML="";
- const list=trendingIdeas.filter(item=>selected==="all"||item.category===selected);
 
- if(list.length===0){
-  grid.innerHTML='<div class="empty">कोई आइडिया नहीं मिला।</div>';
-  return;
- }
+    const grid =
+        document.getElementById("ideaGrid");
 
- list.forEach(item=>{
-  const card=document.createElement("article");
-  card.className="card";
 
-  const tag=document.createElement("span");
-  tag.className="tag";
-  tag.textContent=item.category;
+    grid.innerHTML = "";
 
-  const title=document.createElement("h2");
-  title.textContent=item.title;
 
-  const desc=document.createElement("p");
-  desc.textContent=item.desc;
+    const list =
+        trendingIdeas.filter(item =>
+            selected === "all" ||
+            item.category === selected
+        );
 
-  const badge=document.createElement("div");
-  badge.className="badge";
-  badge.textContent="✦ "+item.trend;
 
-  const save=document.createElement("button");
-  save.textContent="💾 Save Idea";
-  save.onclick=()=>saveIdea(item);
+    if(list.length === 0){
 
-  card.append(tag,title,desc,badge,save);
-  grid.appendChild(card);
- });
+        grid.innerHTML =
+            '<div class="empty">कोई आइडिया नहीं मिला।</div>';
+
+        return;
+
+    }
+
+
+    list.forEach(item => {
+
+        const card =
+            document.createElement("article");
+
+        card.className = "card";
+
+
+        const tag =
+            document.createElement("span");
+
+        tag.className = "tag";
+
+        tag.textContent =
+            item.category;
+
+
+        const title =
+            document.createElement("h2");
+
+        title.textContent =
+            item.title;
+
+
+        const desc =
+            document.createElement("p");
+
+        desc.textContent =
+            item.desc;
+
+
+        const badge =
+            document.createElement("div");
+
+        badge.className = "badge";
+
+        badge.textContent =
+            "✦ " + item.trend;
+
+
+        const save =
+            document.createElement("button");
+
+        save.textContent =
+            "💾 Save Idea";
+
+
+        save.onclick =
+            () => saveIdea(item);
+
+
+        card.append(
+            tag,
+            title,
+            desc,
+            badge,
+            save
+        );
+
+
+        grid.appendChild(card);
+
+    });
+
 }
+
 
 function saveIdea(item){
- let saved=[];
- try{
-  saved=JSON.parse(localStorage.getItem("ideaGeniusSaved")||"[]");
-  if(!Array.isArray(saved))saved=[];
- }catch(e){saved=[];}
 
- saved.push({
-  title:item.title,
-  text:item.desc,
-  date:new Date().toLocaleDateString()
- });
+    let saved = [];
 
- localStorage.setItem("ideaGeniusSaved",JSON.stringify(saved));
- alert("आइडिया सेव हो गया! Saved Ideas पेज पर देखें।");
+
+    try{
+
+        saved =
+            JSON.parse(
+                localStorage.getItem("ideaGeniusSaved") || "[]"
+            );
+
+
+        if(!Array.isArray(saved)){
+            saved = [];
+        }
+
+    }catch(e){
+
+        saved = [];
+
+    }
+
+
+    /*
+       Duplicate save रोकने के लिए
+    */
+
+    const alreadySaved =
+        saved.some(
+            idea =>
+                idea.title === item.title &&
+                idea.text === item.desc
+        );
+
+
+    if(alreadySaved){
+
+        alert("यह आइडिया पहले से Saved Ideas में मौजूद है।");
+
+        return;
+
+    }
+
+
+    saved.push({
+
+        title:item.title,
+
+        text:item.desc,
+
+        date:new Date().toLocaleDateString("hi-IN")
+
+    });
+
+
+    localStorage.setItem(
+        "ideaGeniusSaved",
+        JSON.stringify(saved)
+    );
+
+
+    alert(
+        "आइडिया सेव हो गया! Saved Ideas पेज पर देखें।"
+    );
+
 }
 
+
 renderIdeas();
+
 </script>
+
 
 </body>
 </html>
-</var>
+```
