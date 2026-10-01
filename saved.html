@@ -1,178 +1,651 @@
-1
+```html id="q2m7zx"
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html><!DOCTYPE html>
-
 <html lang="hi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Saved Ideas | IDEA GENIUS</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#0b1020;color:white;min-height:100vh}
-header{background:#141b33;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;border-bottom:1px solid #303957}
-.logo{font-size:25px;font-weight:bold;color:#a78bfa}
-nav{display:flex;gap:16px;flex-wrap:wrap}
-nav a{color:#dbe3ff;text-decoration:none;font-size:14px}
-nav a:hover{color:#a78bfa}
-.container{max-width:1100px;margin:45px auto;padding:20px}
-.hero{text-align:center;margin-bottom:30px}
-.hero h1{font-size:36px;margin-bottom:12px}
-.hero h1 span{color:#a78bfa}
-.hero p{color:#aab4d0;line-height:1.7}
-.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:25px}
-input{flex:1;min-width:200px;padding:13px;border-radius:10px;border:1px solid #394566;background:#151d36;color:white;font-size:15px}
-button{border:0;border-radius:9px;padding:12px 18px;background:#8b5cf6;color:white;font-weight:bold;cursor:pointer}
-button:hover{background:#7444e8}
-.delete-all{background:#dc3545}
-.delete-all:hover{background:#b92332}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.idea{background:#151d36;border:1px solid #303957;border-radius:15px;padding:20px}
-.idea h2{font-size:19px;color:#c4b5fd;margin-bottom:12px}
-.idea p{color:#cbd5e1;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
-.date{font-size:12px;color:#8994b5;margin-top:14px}
-.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
-.actions button{font-size:13px;padding:10px 13px}
-.remove{background:#dc3545}
-.empty{text-align:center;background:#151d36;border:1px dashed #394566;border-radius:15px;padding:40px;color:#aab4d0;grid-column:1/-1}
-footer{text-align:center;padding:25px;color:#8994b5;border-top:1px solid #303957;margin-top:50px}
-@media(max-width:600px){.hero h1{font-size:29px}.container{margin:25px auto}}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#0b1020;
+    color:white;
+    min-height:100vh;
+}
+
+header{
+    background:#141b33;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    border-bottom:1px solid #303957;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#a78bfa;
+}
+
+nav{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#dbe3ff;
+    text-decoration:none;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#a78bfa;
+}
+
+.container{
+    max-width:1100px;
+    margin:45px auto;
+    padding:20px;
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-size:36px;
+    margin-bottom:12px;
+}
+
+.hero h1 span{
+    color:#a78bfa;
+}
+
+.hero p{
+    color:#aab4d0;
+    line-height:1.7;
+}
+
+.toolbar{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+input{
+    flex:1;
+    min-width:200px;
+    padding:13px;
+    border-radius:10px;
+    border:1px solid #394566;
+    background:#151d36;
+    color:white;
+    font-size:15px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#a78bfa;
+}
+
+button{
+    border:0;
+    border-radius:9px;
+    padding:12px 18px;
+    background:#8b5cf6;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#7444e8;
+}
+
+.delete-all{
+    background:#dc3545;
+}
+
+.delete-all:hover{
+    background:#b92332;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+}
+
+.idea{
+    background:#151d36;
+    border:1px solid #303957;
+    border-radius:15px;
+    padding:20px;
+}
+
+.idea h2{
+    font-size:19px;
+    color:#c4b5fd;
+    margin-bottom:12px;
+}
+
+.idea p{
+    color:#cbd5e1;
+    line-height:1.6;
+    white-space:pre-wrap;
+    overflow-wrap:anywhere;
+}
+
+.date{
+    font-size:12px;
+    color:#8994b5;
+    margin-top:14px;
+}
+
+.actions{
+    display:flex;
+    gap:9px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.actions button{
+    font-size:13px;
+    padding:10px 13px;
+}
+
+.remove{
+    background:#dc3545;
+}
+
+.remove:hover{
+    background:#b92332;
+}
+
+.empty{
+    text-align:center;
+    background:#151d36;
+    border:1px dashed #394566;
+    border-radius:15px;
+    padding:40px;
+    color:#aab4d0;
+    grid-column:1/-1;
+}
+
+.empty h2{
+    color:#c4b5fd;
+}
+
+.empty a{
+    display:inline-block;
+    margin-top:20px;
+    color:#c4b5fd;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.empty a:hover{
+    color:#a78bfa;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#8994b5;
+    border-top:1px solid #303957;
+    margin-top:50px;
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .container{
+        margin:25px auto;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .toolbar{
+        flex-direction:column;
+    }
+
+    input{
+        width:100%;
+    }
+
+}
+
 </style>
+
 </head>
+
+
 <body>
 
+
 <header>
-  <div class="logo">💡 IDEA GENIUS</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="business.html">Business</a>
-    <a href="youtube.html">YouTube</a>
-    <a href="website.html">Website</a>
-    <a href="ai.html">AI Generator</a>
-    <a href="saved.html">Saved Ideas</a>
-  </nav>
+
+    <div class="logo">
+        💡 IDEA GENIUS
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="business.html">Business</a>
+
+        <a href="youtube.html">YouTube</a>
+
+        <a href="website.html">Website</a>
+
+        <a href="ai.html">AI Generator</a>
+
+        <a href="saved.html">Saved Ideas</a>
+
+        <a href="trending.html">Trending</a>
+
+        <a href="learning.html">Learning</a>
+
+        <a href="about.html">About Us</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
 </header>
 
+
 <main class="container">
-  <section class="hero">
-    <h1>💾 <span>Saved Ideas</span></h1>
-    <p>आपके सेव किए गए आइडियाज़ यहाँ दिखाई देंगे।<br>आप इन्हें कॉपी या डिलीट कर सकते हैं।</p>
-  </section>
 
-  <div class="toolbar">
-    <input type="search" id="search" placeholder="🔍 आइडिया खोजें..." oninput="showIdeas()">
-    <button onclick="showIdeas()">Refresh</button>
-    <button class="delete-all" onclick="deleteAll()">सभी डिलीट करें</button>
-  </div>
 
-  <section class="grid" id="ideaList"></section>
+<section class="hero">
+
+    <h1>
+        💾 <span>Saved Ideas</span>
+    </h1>
+
+    <p>
+        आपके सेव किए गए आइडियाज़ यहाँ दिखाई देंगे।
+        <br>
+        आप इन्हें कॉपी या डिलीट कर सकते हैं।
+    </p>
+
+</section>
+
+
+<div class="toolbar">
+
+    <input
+        type="search"
+        id="search"
+        placeholder="🔍 आइडिया खोजें..."
+        oninput="showIdeas()"
+    >
+
+    <button onclick="showIdeas()">
+        🔄 Refresh
+    </button>
+
+    <button
+        class="delete-all"
+        onclick="deleteAll()"
+    >
+        🗑️ सभी डिलीट करें
+    </button>
+
+</div>
+
+
+<section
+    class="grid"
+    id="ideaList"
+></section>
+
+
 </main>
 
-<footer>© 2026 IDEA GENIUS | Think • Create • Grow</footer>
+
+<footer>
+
+    © 2026 IDEA GENIUS | Think • Create • Grow
+
+</footer>
+
 
 <script>
+
+
 function getSaved(){
-  try{
-    const data=JSON.parse(localStorage.getItem("ideaGeniusSaved")||"[]");
-    return Array.isArray(data)?data:[];
-  }catch(e){return [];}
+
+    try{
+
+        const data =
+            JSON.parse(
+                localStorage.getItem("ideaGeniusSaved") || "[]"
+            );
+
+        return Array.isArray(data) ? data : [];
+
+    }catch(e){
+
+        return [];
+
+    }
+
 }
+
 
 function showIdeas(){
-  const list=document.getElementById("ideaList");
-  const search=document.getElementById("search").value.toLowerCase();
-  const ideas=getSaved();
-  list.innerHTML="";
 
-  const filtered=ideas
-    .map((idea,index)=>({...idea,index}))
-    .filter(idea=>(idea.title||"").toLowerCase().includes(search)||
-                  (idea.text||"").toLowerCase().includes(search));
+    const list =
+        document.getElementById("ideaList");
 
-  if(filtered.length===0){
-    list.innerHTML='<div class="empty"><h2>अभी कोई आइडिया नहीं मिला 😕</h2><p style="margin-top:10px">AI Generator पर जाकर आइडिया जनरेट करें और Save Idea दबाएँ।</p><a href="ai.html" style="display:inline-block;margin-top:20px;color:#c4b5fd">AI Generator खोलें →</a></div>';
-    return;
-  }
+    const search =
+        document
+        .getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
 
-  filtered.forEach(idea=>{
-    const card=document.createElement("article");
-    card.className="idea";
+    const ideas = getSaved();
 
-    const title=document.createElement("h2");
-    title.textContent=idea.title||"Saved Idea";
+    list.innerHTML = "";
 
-    const text=document.createElement("p");
-    text.textContent=idea.text||"";
 
-    const date=document.createElement("div");
-    date.className="date";
-    date.textContent="सेव किया गया: "+(idea.date||"तारीख उपलब्ध नहीं");
+    const filtered = ideas
 
-    const actions=document.createElement("div");
-    actions.className="actions";
+        .map((idea,index)=>({
+            ...idea,
+            index:index
+        }))
 
-    const copy=document.createElement("button");
-    copy.textContent="📋 Copy";
-    copy.onclick=()=>copyIdea(idea);
+        .filter(idea=>
 
-    const remove=document.createElement("button");
-    remove.className="remove";
-    remove.textContent="🗑️ Delete";
-    remove.onclick=()=>deleteIdea(idea.index);
+            (idea.title || "")
+            .toLowerCase()
+            .includes(search)
 
-    actions.append(copy,remove);
-    card.append(title,text,date,actions);
-    list.appendChild(card);
-  });
+            ||
+
+            (idea.text || "")
+            .toLowerCase()
+            .includes(search)
+
+        );
+
+
+    if(filtered.length === 0){
+
+        list.innerHTML = `
+
+            <div class="empty">
+
+                <h2>
+                    अभी कोई आइडिया नहीं मिला 😕
+                </h2>
+
+                <p style="margin-top:10px">
+
+                    AI Generator पर जाकर आइडिया जनरेट करें
+                    और Save Idea दबाएँ।
+
+                </p>
+
+                <a href="ai.html">
+                    AI Generator खोलें →
+                </a>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    filtered.forEach(idea=>{
+
+
+        const card =
+            document.createElement("article");
+
+        card.className = "idea";
+
+
+        const title =
+            document.createElement("h2");
+
+        title.textContent =
+            idea.title || "Saved Idea";
+
+
+        const text =
+            document.createElement("p");
+
+        text.textContent =
+            idea.text || "";
+
+
+        const date =
+            document.createElement("div");
+
+        date.className = "date";
+
+        date.textContent =
+            "सेव किया गया: " +
+            (idea.date || "तारीख उपलब्ध नहीं");
+
+
+        const actions =
+            document.createElement("div");
+
+        actions.className = "actions";
+
+
+        const copy =
+            document.createElement("button");
+
+        copy.textContent =
+            "📋 Copy";
+
+        copy.onclick =
+            ()=>copyIdea(idea);
+
+
+        const remove =
+            document.createElement("button");
+
+        remove.className =
+            "remove";
+
+        remove.textContent =
+            "🗑️ Delete";
+
+        remove.onclick =
+            ()=>deleteIdea(idea.index);
+
+
+        actions.append(copy,remove);
+
+        card.append(
+            title,
+            text,
+            date,
+            actions
+        );
+
+        list.appendChild(card);
+
+    });
+
 }
+
 
 function copyIdea(idea){
-  const text=(idea.title||"Saved Idea")+"\n"+(idea.text||"");
-  if(navigator.clipboard&&navigator.clipboard.writeText){
-    navigator.clipboard.writeText(text)
-      .then(()=>alert("आइडिया कॉपी हो गया!"))
-      .catch(()=>fallbackCopy(text));
-  }else{
-    fallbackCopy(text);
-  }
+
+    const text =
+        (idea.title || "Saved Idea") +
+        "\n" +
+        (idea.text || "");
+
+
+    if(
+        navigator.clipboard &&
+        navigator.clipboard.writeText
+    ){
+
+        navigator.clipboard
+        .writeText(text)
+
+        .then(()=>{
+
+            alert("आइडिया कॉपी हो गया!");
+
+        })
+
+        .catch(()=>{
+
+            fallbackCopy(text);
+
+        });
+
+    }else{
+
+        fallbackCopy(text);
+
+    }
+
 }
+
 
 function fallbackCopy(text){
-  const area=document.createElement("textarea");
-  area.value=text;
-  document.body.appendChild(area);
-  area.select();
-  try{document.execCommand("copy");alert("आइडिया कॉपी हो गया!")}
-  catch(e){alert("कॉपी नहीं हो पाया।")}
-  area.remove();
+
+    const area =
+        document.createElement("textarea");
+
+    area.value = text;
+
+    area.style.position = "fixed";
+    area.style.left = "-9999px";
+
+    document.body.appendChild(area);
+
+    area.select();
+
+    try{
+
+        document.execCommand("copy");
+
+        alert("आइडिया कॉपी हो गया!");
+
+    }catch(e){
+
+        alert("कॉपी नहीं हो पाया।");
+
+    }
+
+    area.remove();
+
 }
+
 
 function deleteIdea(index){
-  if(!confirm("क्या आप इस आइडिया को डिलीट करना चाहते हैं?"))return;
-  const ideas=getSaved();
-  ideas.splice(index,1);
-  localStorage.setItem("ideaGeniusSaved",JSON.stringify(ideas));
-  showIdeas();
+
+    if(
+        !confirm(
+            "क्या आप इस आइडिया को डिलीट करना चाहते हैं?"
+        )
+    ){
+
+        return;
+
+    }
+
+
+    const ideas =
+        getSaved();
+
+
+    ideas.splice(index,1);
+
+
+    localStorage.setItem(
+        "ideaGeniusSaved",
+        JSON.stringify(ideas)
+    );
+
+
+    showIdeas();
+
 }
+
 
 function deleteAll(){
-  if(!confirm("क्या आप सभी सेव किए गए आइडियाज़ डिलीट करना चाहते हैं?"))return;
-  localStorage.removeItem("ideaGeniusSaved");
-  showIdeas();
+
+    const ideas =
+        getSaved();
+
+
+    if(ideas.length === 0){
+
+        alert("डिलीट करने के लिए कोई सेव आइडिया नहीं है।");
+
+        return;
+
+    }
+
+
+    if(
+        !confirm(
+            "क्या आप सभी सेव किए गए आइडियाज़ डिलीट करना चाहते हैं?"
+        )
+    ){
+
+        return;
+
+    }
+
+
+    localStorage.removeItem(
+        "ideaGeniusSaved"
+    );
+
+
+    showIdeas();
+
 }
 
+
 showIdeas();
+
 </script>
+
 
 </body>
 </html>
+```
 
