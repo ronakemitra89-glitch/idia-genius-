@@ -1,138 +1,404 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html><!DOCTYPE html>
-
 <html lang="hi">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Contact Us | IDEA GENIUS</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#0b1020;color:white;min-height:100vh}
-header{background:#141b33;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;border-bottom:1px solid #303957}
-.logo{font-size:25px;font-weight:bold;color:#a78bfa}
-nav{display:flex;gap:14px;flex-wrap:wrap}
-nav a{color:#dbe3ff;text-decoration:none;font-size:14px}
-nav a:hover{color:#a78bfa}
-.container{max-width:1050px;margin:45px auto;padding:20px}
-.hero{text-align:center;margin-bottom:35px}
-.hero h1{font-size:38px;margin-bottom:12px}
-.hero h1 span{color:#a78bfa}
-.hero p{color:#aab4d0;line-height:1.7}
-.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:22px}
-.card{background:#151d36;border:1px solid #303957;border-radius:16px;padding:25px}
-.card h2{font-size:23px;color:#c4b5fd;margin-bottom:18px}
-.info{margin:20px 0;color:#dbe3ff;line-height:1.8}
-.info strong{display:block;color:#a78bfa;margin-bottom:4px}
-label{display:block;margin:16px 0 8px;font-weight:bold}
-input,textarea{width:100%;padding:13px;border-radius:10px;border:1px solid #394566;background:#0d1429;color:white;font-size:15px;outline:none}
-textarea{min-height:130px;resize:vertical}
-input:focus,textarea:focus{border-color:#a78bfa}
-button{border:0;border-radius:9px;padding:13px 20px;background:#8b5cf6;color:white;font-weight:bold;cursor:pointer;margin-top:18px;font-size:15px}
-button:hover{background:#7444e8}
-.note{font-size:12px;color:#aab4d0;margin-top:12px;line-height:1.6}
-footer{text-align:center;padding:25px;color:#8994b5;border-top:1px solid #303957;margin-top:50px}
-@media(max-width:700px){.contact-grid{grid-template-columns:1fr}.hero h1{font-size:30px}.container{margin:25px auto}}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#0b1020;
+    color:white;
+    min-height:100vh;
+}
+
+header{
+    background:#141b33;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    border-bottom:1px solid #303957;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#a78bfa;
+}
+
+nav{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#dbe3ff;
+    text-decoration:none;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#a78bfa;
+}
+
+.container{
+    max-width:1050px;
+    margin:45px auto;
+    padding:20px;
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.hero h1 span{
+    color:#a78bfa;
+}
+
+.hero p{
+    color:#aab4d0;
+    line-height:1.7;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:22px;
+}
+
+.card{
+    background:#151d36;
+    border:1px solid #303957;
+    border-radius:16px;
+    padding:25px;
+}
+
+.card h2{
+    font-size:23px;
+    color:#c4b5fd;
+    margin-bottom:18px;
+}
+
+.info{
+    margin:20px 0;
+    color:#dbe3ff;
+    line-height:1.8;
+}
+
+.info strong{
+    display:block;
+    color:#a78bfa;
+    margin-bottom:4px;
+}
+
+label{
+    display:block;
+    margin:16px 0 8px;
+    font-weight:bold;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:13px;
+    border-radius:10px;
+    border:1px solid #394566;
+    background:#0d1429;
+    color:white;
+    font-size:15px;
+    outline:none;
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#a78bfa;
+}
+
+button{
+    border:0;
+    border-radius:9px;
+    padding:13px 20px;
+    background:#8b5cf6;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:18px;
+    font-size:15px;
+}
+
+button:hover{
+    background:#7444e8;
+}
+
+.note{
+    font-size:12px;
+    color:#aab4d0;
+    margin-top:12px;
+    line-height:1.6;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#8994b5;
+    border-top:1px solid #303957;
+    margin-top:50px;
+}
+
+@media(max-width:700px){
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        margin:25px auto;
+    }
+
+    nav{
+        justify-content:center;
+    }
+}
 </style>
+
 </head>
+
 <body>
 
 <header>
-  <div class="logo">💡 IDEA GENIUS</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="business.html">Business</a>
-    <a href="youtube.html">YouTube</a>
-    <a href="website.html">Website</a>
-    <a href="ai.html">AI Generator</a>
-    <a href="saved.html">Saved Ideas</a>
-    <a href="trending.html">Trending</a>
-    <a href="learning.html">Learning</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+
+    <div class="logo">💡 IDEA GENIUS</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="business.html">Business</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="website.html">Website</a>
+        <a href="ai.html">AI Generator</a>
+        <a href="saved.html">Saved Ideas</a>
+        <a href="trending.html">Trending</a>
+        <a href="learning.html">Learning</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
 </header>
 
+
 <main class="container">
-  <section class="hero">
-    <h1>Contact <span>Us</span> 📩</h1>
-    <p>आपका कोई सवाल या सुझाव है? हमें संदेश भेजें।</p>
-  </section>
 
-  <section class="contact-grid">
-    <div class="card">
-      <h2>हमसे संपर्क करें</h2>
-      <div class="info">
-        <strong>📧 Email</strong>
-        अपना ईमेल पता यहाँ जोड़ें।
-      </div>
-      <div class="info">
-        <strong>🌐 Website</strong>
-        IDEA GENIUS
-      </div>
-      <div class="info">
-        <strong>💡 सुझाव</strong>
-        वेबसाइट को बेहतर बनाने के लिए अपने सुझाव भेजें।
-      </div>
-    </div>
+    <section class="hero">
 
-```
-<div class="card">
-  <h2>हमें संदेश भेजें</h2>
-  <form id="contactForm">
-    <label for="name">आपका नाम</label>
-    <input type="text" id="name" placeholder="अपना नाम लिखें" required>
+        <h1>
+            Contact <span>Us</span> 📩
+        </h1>
 
-    <label for="email">ईमेल</label>
-    <input type="email" id="email" placeholder="अपना ईमेल लिखें" required>
+        <p>
+            आपका कोई सवाल या सुझाव है? हमें संदेश भेजें।
+        </p>
 
-    <label for="message">आपका संदेश</label>
-    <textarea id="message" placeholder="अपना संदेश लिखें..." required></textarea>
+    </section>
 
-    <button type="submit">📨 संदेश भेजें</button>
-    <p class="note">यह डेमो फॉर्म है। संदेश वास्तव में भेजने के लिए ईमेल सेवा या बैकएंड जोड़ना होगा।</p>
-  </form>
-</div>
-```
 
-  </section>
+    <section class="contact-grid">
+
+        <!-- Contact Information -->
+
+        <div class="card">
+
+            <h2>हमसे संपर्क करें</h2>
+
+            <div class="info">
+
+                <strong>📧 Email</strong>
+
+                अपना ईमेल पता यहाँ जोड़ें।
+
+            </div>
+
+
+            <div class="info">
+
+                <strong>🌐 Website</strong>
+
+                IDEA GENIUS
+
+            </div>
+
+
+            <div class="info">
+
+                <strong>💡 सुझाव</strong>
+
+                वेबसाइट को बेहतर बनाने के लिए अपने सुझाव भेजें।
+
+            </div>
+
+        </div>
+
+
+        <!-- Contact Form -->
+
+        <div class="card">
+
+            <h2>हमें संदेश भेजें</h2>
+
+            <form id="contactForm">
+
+                <label for="name">
+                    आपका नाम
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="अपना नाम लिखें"
+                    required
+                >
+
+
+                <label for="email">
+                    ईमेल
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="अपना ईमेल लिखें"
+                    required
+                >
+
+
+                <label for="message">
+                    आपका संदेश
+                </label>
+
+                <textarea
+                    id="message"
+                    placeholder="अपना संदेश लिखें..."
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    📨 संदेश भेजें
+                </button>
+
+
+                <p class="note">
+                    यह डेमो फॉर्म है। संदेश भेजने के लिए आपका ईमेल ऐप खुलेगा।
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
 </main>
 
-<footer>© 2026 IDEA GENIUS | Think • Create • Grow</footer>
+
+<footer>
+
+    © 2026 IDEA GENIUS | Think • Create • Grow
+
+</footer>
+
 
 <script>
-document.getElementById("contactForm").addEventListener("submit",function(event){
-  event.preventDefault();
 
-  const name=document.getElementById("name").value.trim();
-  const email=document.getElementById("email").value.trim();
-  const message=document.getElementById("message").value.trim();
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(event){
 
-  if(!name||!email||!message){
-    alert("कृपया सभी जानकारी भरें।");
-    return;
-  }
+    event.preventDefault();
 
-  const subject=encodeURIComponent("IDEA GENIUS वेबसाइट से संदेश");
-  const body=encodeURIComponent(
-    "नाम: "+name+"\n"+
-    "ईमेल: "+email+"\n\n"+
-    "संदेश:\n"+message
-  );
 
-  alert("आपका ईमेल ऐप खुलेगा। वहाँ से संदेश भेज सकते हैं।");
-  window.location.href="mailto:?subject="+subject+"&body="+body;
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    if(!name || !email || !message){
+
+        alert("कृपया सभी जानकारी भरें।");
+
+        return;
+    }
+
+
+    const subject =
+        encodeURIComponent(
+            "IDEA GENIUS वेबसाइट से संदेश"
+        );
+
+
+    const body =
+        encodeURIComponent(
+            "नाम: " + name +
+            "\n" +
+            "ईमेल: " + email +
+            "\n\n" +
+            "संदेश:\n" +
+            message
+        );
+
+
+    alert(
+        "आपका ईमेल ऐप खुलेगा। वहाँ से संदेश भेज सकते हैं।"
+    );
+
+
+    /*
+       यहाँ अपना वास्तविक ईमेल डालें।
+       उदाहरण:
+       ronak@example.com
+    */
+
+    window.location.href =
+        "mailto:YOUR-EMAIL@example.com?subject=" +
+        subject +
+        "&body=" +
+        body;
+
 });
+
 </script>
 
 </body>
 </html>
+```
