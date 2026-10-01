@@ -1,14 +1,5 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html><!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
@@ -51,7 +42,7 @@ header {
 nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
+    gap: 15px;
 }
 
 nav a {
@@ -108,6 +99,11 @@ nav a:hover {
     background: transparent;
     border: none;
     outline: none;
+    font-size: 15px;
+}
+
+.search input::placeholder {
+    color: #9ba8c8;
 }
 
 .search button {
@@ -117,6 +113,7 @@ nav a:hover {
     border: none;
     border-radius: 9px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .container {
@@ -150,6 +147,7 @@ nav a:hover {
     color: white;
     border: 1px solid #34446f;
     cursor: pointer;
+    transition: .2s;
 }
 
 .filters button.active,
@@ -175,6 +173,7 @@ nav a:hover {
 .card:hover {
     transform: translateY(-5px);
     border-color: #087df0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
 }
 
 .card-icon {
@@ -284,13 +283,18 @@ footer {
 }
 
 @media(max-width: 600px) {
+
     header {
         justify-content: center;
     }
 
     nav {
         justify-content: center;
-        gap: 14px;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
     }
 
     .hero {
@@ -306,6 +310,10 @@ footer {
         gap: 5px;
     }
 
+    .search button {
+        width: 100%;
+    }
+
     .cards {
         grid-template-columns: 1fr;
     }
@@ -316,7 +324,10 @@ footer {
 <body>
 
 <header>
-    <div class="logo">💡 IDEA <span>GENIUS</span></div>
+
+    <div class="logo">
+        💡 IDEA <span>GENIUS</span>
+    </div>
 
     <nav>
         <a href="index.html">🏠 Home</a>
@@ -324,13 +335,23 @@ footer {
         <a href="youtube.html">🎬 YouTube</a>
         <a href="website.html">🌐 Website</a>
         <a href="ai.html">🤖 AI Generator</a>
+        <a href="saved.html">❤️ Saved</a>
+        <a href="trending.html">🔥 Trending</a>
+        <a href="learning.html">📚 Learning</a>
+        <a href="about.html">ℹ️ About</a>
+        <a href="contact.html">📩 Contact</a>
     </nav>
+
 </header>
 
+
 <section class="hero">
+
     <div class="icon">🌐</div>
 
-    <h1>Website <span>Ideas</span></h1>
+    <h1>
+        Website <span>Ideas</span>
+    </h1>
 
     <p>
         अपनी खुद की वेबसाइट बनाने के लिए नए आइडिया खोजें।<br>
@@ -338,48 +359,77 @@ footer {
     </p>
 
     <div class="search">
+
         <input
             type="text"
             id="search"
             placeholder="वेबसाइट आइडिया खोजें..."
         >
-        <button onclick="searchIdeas()">🔍 खोजें</button>
+
+        <button onclick="searchIdeas()">
+            🔍 खोजें
+        </button>
+
     </div>
+
 </section>
+
 
 <section class="container">
 
     <div class="heading">
-        <h2>🚀 वेबसाइट बनाने के आइडिया</h2>
-        <p>अपनी पसंद की कैटेगरी चुनें और नए आइडिया पाएँ।</p>
+
+        <h2>
+            🚀 वेबसाइट बनाने के आइडिया
+        </h2>
+
+        <p>
+            अपनी पसंद की कैटेगरी चुनें और नए आइडिया पाएँ।
+        </p>
+
     </div>
 
+
     <div class="filters">
-        <button class="active" onclick="filterIdeas('All',this)">
+
+        <button
+            class="active"
+            onclick="filterIdeas('All', this)">
             सभी
         </button>
 
-        <button onclick="filterIdeas('Business',this)">
+        <button
+            onclick="filterIdeas('Business', this)">
             💼 Business
         </button>
 
-        <button onclick="filterIdeas('Education',this)">
+        <button
+            onclick="filterIdeas('Education', this)">
             📚 Education
         </button>
 
-        <button onclick="filterIdeas('Tools',this)">
+        <button
+            onclick="filterIdeas('Tools', this)">
             🛠️ Online Tools
         </button>
 
-        <button onclick="filterIdeas('Entertainment',this)">
+        <button
+            onclick="filterIdeas('Entertainment', this)">
             🎮 Entertainment
         </button>
+
     </div>
+
 
     <div class="cards" id="cards"></div>
 
+
     <div class="tips">
-        <h2>💡 अपनी वेबसाइट कैसे बनाएँ?</h2>
+
+        <h2>
+            💡 अपनी वेबसाइट कैसे बनाएँ?
+        </h2>
+
         <p>
             सबसे पहले अपनी वेबसाइट का उद्देश्य तय करें।
             फिर HTML से उसका ढाँचा, CSS से डिजाइन और
@@ -387,19 +437,29 @@ footer {
             वेबसाइट को इंटरनेट पर लाइव करने के लिए
             Hosting का इस्तेमाल कर सकते हैं।
         </p>
+
     </div>
 
 </section>
 
+
 <footer>
+
     <strong>💡 IDEA GENIUS</strong><br>
+
     Big Ideas • Better Future 🚀<br>
+
     Made with ❤️ by Ronak<br>
+
     © 2026 IDEA GENIUS
+
 </footer>
 
+
 <script>
+
 const websiteIdeas = [
+
     {
         id: 1,
         icon: "📄",
@@ -408,6 +468,7 @@ const websiteIdeas = [
         desc: "एक ऐसी वेबसाइट बनाएँ जहाँ लोग अपनी जानकारी भरकर रिज्यूमे बना सकें।",
         details: "कैटेगरी: Online Tool"
     },
+
     {
         id: 2,
         icon: "🧮",
@@ -416,6 +477,7 @@ const websiteIdeas = [
         desc: "उम्र, प्रतिशत, EMI और अन्य कैलकुलेटर एक ही वेबसाइट पर उपलब्ध कराएँ।",
         details: "कैटेगरी: Utility"
     },
+
     {
         id: 3,
         icon: "📚",
@@ -424,6 +486,7 @@ const websiteIdeas = [
         desc: "विद्यार्थियों के लिए ऑनलाइन नोट्स, क्विज और पढ़ाई की सामग्री उपलब्ध कराएँ।",
         details: "कैटेगरी: Education"
     },
+
     {
         id: 4,
         icon: "💼",
@@ -432,6 +495,7 @@ const websiteIdeas = [
         desc: "अपने शहर और आसपास की नौकरियों की जानकारी देने वाली वेबसाइट बनाएँ।",
         details: "कैटेगरी: Job Portal"
     },
+
     {
         id: 5,
         icon: "🤖",
@@ -440,6 +504,7 @@ const websiteIdeas = [
         desc: "यूज़र की पसंद के अनुसार नई कहानियाँ तैयार करने वाली वेबसाइट बनाएँ।",
         details: "कैटेगरी: AI Tool"
     },
+
     {
         id: 6,
         icon: "🎮",
@@ -448,6 +513,7 @@ const websiteIdeas = [
         desc: "लोगों के लिए मनोरंजक और ज्ञानवर्धक क्विज तैयार करें।",
         details: "कैटेगरी: Quiz"
     },
+
     {
         id: 7,
         icon: "🛒",
@@ -456,6 +522,7 @@ const websiteIdeas = [
         desc: "एक ऐसी वेबसाइट बनाएँ जहाँ लोग अलग-अलग उत्पाद देख सकें और खरीद सकें।",
         details: "कैटेगरी: E-commerce"
     },
+
     {
         id: 8,
         icon: "🎬",
@@ -464,6 +531,7 @@ const websiteIdeas = [
         desc: "फिल्मों, कलाकारों और फिल्मों से जुड़ी जानकारी दिखाने वाली वेबसाइट बनाएँ।",
         details: "कैटेगरी: Entertainment"
     },
+
     {
         id: 9,
         icon: "💻",
@@ -472,6 +540,7 @@ const websiteIdeas = [
         desc: "HTML, CSS और JavaScript के आसान पाठ और उदाहरण उपलब्ध कराएँ।",
         details: "कैटेगरी: Coding"
     },
+
     {
         id: 10,
         icon: "💡",
@@ -480,121 +549,246 @@ const websiteIdeas = [
         desc: "लोगों को बिजनेस, YouTube और वेबसाइट के नए आइडिया देने वाली वेबसाइट बनाएँ।",
         details: "कैटेगरी: Creative Tool"
     }
+
 ];
+
 
 let activeCategory = "All";
 
+
 function getSaved() {
+
     try {
-        return JSON.parse(localStorage.getItem("websiteSaved")) || [];
+
+        return JSON.parse(
+            localStorage.getItem("websiteSaved")
+        ) || [];
+
     } catch {
+
         return [];
+
     }
+
 }
 
+
 function toggleSave(id) {
+
     let saved = getSaved();
 
     if (saved.includes(id)) {
-        saved = saved.filter(item => item !== id);
+
+        saved = saved.filter(
+            item => item !== id
+        );
+
     } else {
+
         saved.push(id);
+
     }
 
-    localStorage.setItem("websiteSaved", JSON.stringify(saved));
+    localStorage.setItem(
+        "websiteSaved",
+        JSON.stringify(saved)
+    );
+
     renderIdeas();
+
 }
 
+
 function renderIdeas() {
-    const query = document
+
+    const query =
+        document
         .getElementById("search")
-        .value.toLowerCase();
+        .value
+        .toLowerCase()
+        .trim();
 
-    const filtered = websiteIdeas.filter(idea => {
-        const categoryMatch =
-            activeCategory === "All" ||
-            idea.category === activeCategory;
 
-        const searchMatch =
-            (idea.title + " " + idea.desc + " " + idea.category)
-            .toLowerCase()
-            .includes(query);
+    const filtered =
+        websiteIdeas.filter(idea => {
 
-        return categoryMatch && searchMatch;
-    });
+            const categoryMatch =
+                activeCategory === "All" ||
+                idea.category === activeCategory;
+
+
+            const searchMatch =
+                (
+                    idea.title +
+                    " " +
+                    idea.desc +
+                    " " +
+                    idea.category
+                )
+                .toLowerCase()
+                .includes(query);
+
+
+            return categoryMatch && searchMatch;
+
+        });
+
 
     const saved = getSaved();
 
+
     document.getElementById("cards").innerHTML =
+
         filtered.length
-        ? filtered.map(idea => `
+
+        ?
+
+        filtered.map(idea => `
+
             <div class="card">
-                <div class="card-icon">${idea.icon}</div>
 
-                <span class="tag">${idea.category}</span>
+                <div class="card-icon">
+                    ${idea.icon}
+                </div>
 
-                <h3>${idea.title}</h3>
+                <span class="tag">
+                    ${idea.category}
+                </span>
 
-                <p>${idea.desc}</p>
+                <h3>
+                    ${idea.title}
+                </h3>
+
+                <p>
+                    ${idea.desc}
+                </p>
 
                 <div class="details">
                     ✨ ${idea.details}
                 </div>
 
                 <div class="actions">
-                    <button class="save"
+
+                    <button
+                        class="save"
                         onclick="toggleSave(${idea.id})">
-                        ${saved.includes(idea.id) ? "❤️ Saved" : "🤍 Save"}
+
+                        ${
+                            saved.includes(idea.id)
+                            ? "❤️ Saved"
+                            : "🤍 Save"
+                        }
+
                     </button>
 
-                    <button class="copy"
+                    <button
+                        class="copy"
                         onclick="copyIdea(${idea.id})">
+
                         📋 Copy
+
                     </button>
+
                 </div>
+
             </div>
+
         `).join("")
-        : `<div class="empty">😕 कोई आइडिया नहीं मिला।</div>`;
+
+        :
+
+        `
+
+            <div class="empty">
+
+                😕 कोई आइडिया नहीं मिला।
+
+            </div>
+
+        `;
+
 }
+
 
 function filterIdeas(category, button) {
+
     activeCategory = category;
 
-    document.querySelectorAll(".filters button")
-        .forEach(btn => btn.classList.remove("active"));
+
+    document
+        .querySelectorAll(".filters button")
+        .forEach(btn =>
+            btn.classList.remove("active")
+        );
+
 
     button.classList.add("active");
+
+
     renderIdeas();
+
 }
+
 
 function searchIdeas() {
+
     renderIdeas();
+
 }
+
 
 async function copyIdea(id) {
-    const idea = websiteIdeas.find(item => item.id === id);
+
+    const idea =
+        websiteIdeas.find(
+            item => item.id === id
+        );
+
 
     const text =
-        idea.title + "\n\n" +
-        idea.desc + "\n\n" +
-        "Category: " + idea.category;
+        idea.title +
+        "\n\n" +
+        idea.desc +
+        "\n\n" +
+        "Category: " +
+        idea.category;
+
 
     try {
+
         await navigator.clipboard.writeText(text);
+
         alert("✅ आइडिया कॉपी हो गया!");
+
     } catch {
-        prompt("इस आइडिया को कॉपी करें:", text);
+
+        prompt(
+            "इस आइडिया को कॉपी करें:",
+            text
+        );
+
     }
+
 }
 
-document.getElementById("search").addEventListener("keydown", e => {
-    if (e.key === "Enter") {
-        searchIdeas();
-    }
-});
+
+document
+    .getElementById("search")
+    .addEventListener("keydown", e => {
+
+        if (e.key === "Enter") {
+
+            searchIdeas();
+
+        }
+
+    });
+
 
 renderIdeas();
+
 </script>
 
 </body>
 </html>
+```
